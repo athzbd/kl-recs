@@ -1,0 +1,49 @@
+name: Resolve place IDs
+
+# Run by hand from the Actions tab (or `gh workflow run resolve-places.yml`).
+# Fills in Place IDs, coordinates and areas for any entry still missing them,
+# so the key never has to leave GitHub.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Preview matches without committing'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Resolve
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/resolve-place-ids.mjs --dry-run
+          else
+            node scripts/resolve-place-ids.mjs
+          fi
+
+      - name: Commit the resolved data
+        if: inputs.dry_run == false
+        run: |
+          git config user.name  "kl-recs-bot"
+          git config user.email "actions@github.com"
+          if git diff --quiet data/places.json; then
+            echo "Nothing changed."
+          else
+            git add data/places.json
+            git commit -m "chore: resolve place IDs, coordinates and areas"
+            git push
+          fi
