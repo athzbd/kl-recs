@@ -1,10 +1,19 @@
 name: Check for chains
 
-# Run by hand. Reports which entries have more than one outlet so they can be
-# named or split deliberately. Writes nothing.
+# Run by hand. Records how many outlets each entry has and which areas they
+# reach, so the area filter can match any branch rather than just the pinned
+# one. Pass dry_run to see the report without writing.
 
 on:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Report only, do not commit'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
 
 jobs:
   branches:
@@ -14,7 +23,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+
       - name: Look for multi-outlet brands
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-        run: node scripts/check-branches.mjs
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/check-branches.mjs --dry-run
+          else
+            node scripts/check-branches.mjs
+          fi
+
+      - name: Commit the branch data
+        if: inputs.dry_run == false
+        run: |
+          git config user.name  "kl-recs-bot"
+          git config user.email "actions@github.com"
+          if git diff --quiet data/places.json; then
+            echo "Nothing changed."
+          else
+            git add data/places.json
+            git commit -m "chore: record outlet counts and areas for chains"
+            git push
+          fi
