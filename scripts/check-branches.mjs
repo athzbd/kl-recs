@@ -61,7 +61,21 @@ const report = [];
 const problems = [];
 
 for (const place of data.places) {
+  /* An explicit override wins over Google. Text Search under-reports some
+     brands — it found one Coffee Stain when there are three — and Athena
+     knows the ground truth. No API call needed. */
+  if (place.branchesOverride) {
+    const { outlets, areas } = place.branchesOverride;
+    place.google.outlets = outlets ?? areas.length;
+    place.google.outletAreas = [...areas].sort();
+    if (!place.area) place.area = areas[0];
+    report.push({ name: `${place.name} (manual)`, count: place.google.outlets, areas });
+    continue;
+  }
+
   if (place.singleLocation) {
+    // No search, but still derive an area from the address already stored.
+    place.area = place.area || areaFromAddress(place.google?.address);
     place.google.outlets = 1;
     place.google.outletAreas = place.area ? [place.area] : [];
     continue;

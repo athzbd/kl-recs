@@ -2415,6 +2415,14 @@
         "outletAreas": [
           "Mont Kiara"
         ]
+      },
+      "branchesOverride": {
+        "outlets": 3,
+        "areas": [
+          "Publika",
+          "Bangsar",
+          "Rawang"
+        ]
       }
     },
     {

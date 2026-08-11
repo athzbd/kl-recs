@@ -7,7 +7,11 @@
 export const AREA_PATTERNS = [
   [/taman tun dr(?:\.)? ismail|\bTTDI\b/i, 'TTDI'],
   [/bukit damansara|damansara heights|pusat bandar damansara/i, 'Damansara Heights'],
+  // Publika before Mont Kiara: Solaris Dutamas is its own destination locally,
+  // and "Solaris Mont Kiara" is a different place that must not be caught here.
+  [/solaris dutamas|publika|j(?:ala)?ln? dutamas/i, 'Publika'],
   [/mont'? kiara|solaris/i, 'Mont Kiara'],
+  [/rawang/i, 'Rawang'],
   [/sri hartamas|desa hartamas|hartamas/i, 'Sri Hartamas'],
   [/bukit bintang|changkat|jalan alor|\bimbi\b/i, 'Bukit Bintang'],
   [/kampung baru|kampung bharu/i, 'Kampung Baru'],
