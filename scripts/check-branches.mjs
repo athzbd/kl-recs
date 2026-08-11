@@ -49,6 +49,32 @@ function brandCore(name) {
   return stripped || norm(name);
 }
 
+/** Generic word, or bare punctuation like the "&" in "Hani Coffee & Roastery". */
+const isDroppable = (token) => {
+  if (/^\W+$/.test(token)) return true;
+  GENERIC.lastIndex = 0;
+  return GENERIC.test(token);
+};
+
+/* A shorter query to retry with, made by dropping descriptive words off the
+ * END only. Google files branches as "FEEKA at The Five" and "FEEKA by the
+ * Park", so "Feeka Coffee Roasters" finds one outlet but "Feeka" finds four.
+ *
+ * Trailing-only matters: "Coffee Stain" must not become "Stain", because
+ * there the generic word is part of the brand.
+ *
+ * Returns null when there is nothing usefully shorter to try.
+ */
+function shortName(name) {
+  const tokens = name.split(/\s+/).filter(Boolean);
+  while (tokens.length > 1 && isDroppable(tokens[tokens.length - 1])) tokens.pop();
+
+  const short = tokens.join(' ');
+  if (short === name) return null;
+  if (short.length < 4 || /^[\d\W]+$/.test(short)) return null;  // "103" etc.
+  return short;
+}
+
 /** Does this result look like the same brand, rather than a coincidence? */
 function sameBrand(entryName, resultName) {
   const a = norm(entryName);
@@ -135,7 +161,19 @@ for (const place of data.places) {
   }
 
   try {
-    const results = await search(place.name);
+    let results = await search(place.name);
+
+    /* One outlet may just mean the full name only matches the original branch.
+       Retry with the shorter brand name, but only when the first search looks
+       thin — this is the difference between ~110 and ~200 API calls a run. */
+    const short = shortName(place.name);
+    if (results.length <= 1 && short) {
+      const more = await search(short);
+      const byId = new Map([...results, ...more].map((r) => [r.id, r]));
+      results = [...byId.values()];
+      if (VERBOSE) console.log(`   (retried as "${short}" -> ${more.length} results)`);
+    }
+
     const brand = results.filter(
       (r) => sameBrand(place.name, r.displayName?.text)
         && r.businessStatus !== 'CLOSED_PERMANENTLY'
