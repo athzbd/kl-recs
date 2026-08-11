@@ -1,0 +1,53 @@
+name: Weekly place check
+
+on:
+  schedule:
+    - cron: '0 22 * * 0'   # Sundays 22:00 UTC = Monday 06:00 in KL
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check every place against Google
+        id: check
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        run: node scripts/check-places.mjs
+
+      - name: Commit any changes
+        run: |
+          git config user.name  "kl-recs-bot"
+          git config user.email "actions@github.com"
+          if git diff --quiet data/places.json; then
+            echo "Nothing changed."
+          else
+            git add data/places.json
+            git commit -m "chore: weekly place status refresh"
+            git push
+          fi
+
+      - name: Open an issue if anything closed for good
+        if: steps.check.outputs.closed_count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLOSED: ${{ steps.check.outputs.closed_names }}
+          COUNT: ${{ steps.check.outputs.closed_count }}
+        run: |
+          gh issue create \
+            --title "$COUNT place(s) permanently closed" \
+            --body "Google now reports these as permanently closed. They've been moved to the archive section:
+
+          $CLOSED
+
+          Close this issue once you've had a look."
