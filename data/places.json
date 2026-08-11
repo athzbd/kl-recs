@@ -1998,18 +1998,18 @@
       "categories": [
         "bars"
       ],
-      "area": null,
+      "area": "Petaling Jaya",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": null,
-        "lat": null,
-        "lng": null,
-        "businessStatus": null,
-        "address": null,
-        "lastChecked": null
+        "placeId": "ChIJdZO6MRtFzDERhaY89RPNTZU",
+        "lat": 3.110664,
+        "lng": 101.62260409999999,
+        "businessStatus": "OPERATIONAL",
+        "address": "19, Jalan 21/11b, Sea Park, 46300 Petaling Jaya, Selangor",
+        "lastChecked": "2026-08-11"
       },
       "searchQuery": "Fifty Tales Petaling Jaya Selangor Malaysia"
     },
