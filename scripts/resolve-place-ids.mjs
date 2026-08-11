@@ -12,6 +12,7 @@
  */
 
 import { readFile, writeFile } from 'node:fs/promises';
+import { areaFromAddress } from './lib/areas.mjs';
 
 const DATA_PATH = new URL('../data/places.json', import.meta.url);
 const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
@@ -20,40 +21,6 @@ const DRY_RUN = process.argv.includes('--dry-run');
 if (!API_KEY) {
   console.error('Missing GOOGLE_MAPS_API_KEY.');
   process.exit(1);
-}
-
-/* Address substring -> canonical area name. Most specific first: the first
-   match wins, so "Bukit Damansara" must be tested before "Damansara". */
-const AREA_PATTERNS = [
-  [/taman tun dr(?:\.)? ismail|\bTTDI\b/i, 'TTDI'],
-  [/bukit damansara|damansara heights/i, 'Damansara Heights'],
-  [/mont'? kiara/i, 'Mont Kiara'],
-  [/sri hartamas|desa hartamas/i, 'Sri Hartamas'],
-  [/bukit bintang|changkat|jalan alor/i, 'Bukit Bintang'],
-  [/kampung baru|kampung bharu/i, 'Kampung Baru'],
-  [/petaling street|jalan sultan|jalan petaling|chinatown|jalan panggong/i, 'Chinatown'],
-  [/bangsar/i, 'Bangsar'],
-  [/brickfields/i, 'Brickfields'],
-  [/\bpudu\b/i, 'Pudu'],
-  [/sentul/i, 'Sentul'],
-  [/cheras/i, 'Cheras'],
-  [/ampang/i, 'Ampang'],
-  [/\bss\s?\d|petaling jaya|\bPJ\b|damansara utama|uptown/i, 'Petaling Jaya'],
-  [/subang/i, 'Subang'],
-  [/shah alam/i, 'Shah Alam'],
-  [/batu caves|selayang/i, 'Batu Caves'],
-  [/bukit jalil/i, 'Bukit Jalil'],
-  [/setapak|wangsa maju/i, 'Setapak'],
-  [/damansara/i, 'Damansara'],
-  [/klcc|jalan p ramlee|jalan binjai|city centre|kuala lumpur city centre/i, 'KLCC'],
-];
-
-function areaFromAddress(address) {
-  if (!address) return null;
-  for (const [pattern, name] of AREA_PATTERNS) {
-    if (pattern.test(address)) return name;
-  }
-  return null;
 }
 
 async function search(query) {

@@ -38,9 +38,23 @@ function haversineKm(a, b) {
 const formatDistance = (km) =>
   km < 1 ? `${Math.round(km * 1000)} m` : `${km.toFixed(1)} km`;
 
+const isChain = (place) => (place.google?.outlets || 1) > 1;
+
+/** Every area this place can be found in, not just the pinned branch. */
+function areasFor(place) {
+  const areas = place.google?.outletAreas?.length
+    ? place.google.outletAreas
+    : (place.area ? [place.area] : []);
+  return areas;
+}
+
+/* For a chain, deliberately omit the place ID. Pinning one arbitrary branch
+   sends you across town when there is an outlet round the corner; without it
+   Google resolves the brand against wherever you actually are. */
 function mapsUrl(place, mode) {
   const q = encodeURIComponent(`${place.name} Kuala Lumpur`);
-  const pid = place.google?.placeId;
+  const pid = isChain(place) ? null : place.google?.placeId;
+
   if (mode === 'directions') {
     return `https://www.google.com/maps/dir/?api=1&destination=${q}`
       + (pid ? `&destination_place_id=${pid}` : '');
@@ -57,10 +71,12 @@ function visiblePlaces() {
 
   let out = data.places.filter((p) => {
     if (categories.size && !p.categories.some((c) => categories.has(c))) return false;
-    if (area && p.area !== area) return false;
+    // A chain matches on any area it reaches, so "coffee in Bangsar" finds
+    // Kopenhagen even when Google pinned its Mont Kiara outlet.
+    if (area && !areasFor(p).includes(area)) return false;
     if (mustEat && !(p.tags || []).includes('must-eat')) return false;
     if (term) {
-      const hay = [p.name, p.notes, p.area, ...(p.tags || []), ...p.categories]
+      const hay = [p.name, p.notes, ...areasFor(p), ...(p.tags || []), ...p.categories]
         .join(' ').toLowerCase();
       if (!hay.includes(term)) return false;
     }
@@ -89,9 +105,16 @@ function cardHtml(place, { archived = false } = {}) {
   const cats = state.data.categories.filter((c) => place.categories.includes(c.id));
   const dishTags = (place.tags || []).filter((t) => t !== 'must-eat');
 
+  // When filtering by area, name the area you asked for rather than whichever
+  // branch happens to be pinned.
+  const areas = areasFor(place);
+  const shownArea = state.area && areas.includes(state.area) ? state.area : place.area;
+  const outlets = place.google?.outlets || 1;
+
   const meta = [
     ...cats.map((c) => `<span class="pill">${c.icon} ${c.label}</span>`),
-    place.area ? `<span class="pill">${escapeHtml(place.area)}</span>` : '',
+    shownArea ? `<span class="pill">${escapeHtml(shownArea)}</span>` : '',
+    outlets > 1 ? `<span class="pill pill-chain">${outlets} branches</span>` : '',
     (place.tags || []).includes('must-eat') ? '<span class="badge-must">Must eat</span>' : '',
     place._km !== undefined && place._km !== Infinity
       ? `<span>${formatDistance(place._km)} away</span>` : '',

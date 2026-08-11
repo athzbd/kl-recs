@@ -108,7 +108,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Lower Ground (Concourse) Level, Menara Berkembar Petronas, Kuala Lumpur City Centre, 50088 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "batu-caves",
@@ -128,7 +129,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Gombak, 68100 Batu Caves, Selangor",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "petaling-street",
@@ -148,7 +150,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Jalan Petaling, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "central-market",
@@ -169,7 +172,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Kuala Lumpur City Centre, 50050 Kuala Lumpur, Federal Territory of Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "masjid-wilayah",
@@ -189,7 +193,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Jabatan Agama Islam Wilayah Persekutuan, Jln Tuanku Abdul Halim, Kompleks Kerajaan, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "islamic-arts-museum",
@@ -209,7 +214,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Islamic Arts Museum Malaysia, Jalan Lembah, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "changkat-bukit-bintang",
@@ -231,7 +237,8 @@
         "address": "Changkat Bukit Bintang, Bukit Bintang, Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
       },
-      "searchQuery": "Jalan Changkat Bukit Bintang Kuala Lumpur"
+      "searchQuery": "Jalan Changkat Bukit Bintang Kuala Lumpur",
+      "singleLocation": true
     },
     {
       "id": "jalan-alor",
@@ -252,7 +259,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "64, 亚罗街, Bukit Bintang, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "merdeka-square",
@@ -272,7 +280,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Kuala Lumpur City Centre, 50050 Kuala Lumpur, Federal Territory of Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "trx",
@@ -292,7 +301,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Persiaran TRX, Tun Razak Exchange, 55188 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "pavilion-mall",
@@ -312,7 +322,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "168, Jln Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "gardens-mall",
@@ -332,7 +343,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Lingkaran Syed Putra, Mid Valley City, 59200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "the-campus-ampang",
@@ -352,7 +364,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "Lot 7706, Jalan Kolam Air Lama, Mukim, Hulu Kelang, 68000 Ampang, Selangor",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "rexkl",
@@ -372,7 +385,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "80, Jalan Sultan, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "publika",
@@ -392,7 +406,8 @@
         "businessStatus": null,
         "address": "Publika, 1, Jln Solaris Dutamas, Solaris Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "village-park-nasi-lemak",
@@ -1885,7 +1900,8 @@
         "address": "Jalan Dungun, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
       },
-      "searchQuery": "The Five KPD Kompleks Pejabat Damansara Bukit Damansara"
+      "searchQuery": "The Five KPD Kompleks Pejabat Damansara Bukit Damansara",
+      "singleLocation": true
     },
     {
       "id": "runcit-bar",

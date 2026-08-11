@@ -264,6 +264,11 @@ select {
   padding: 2px 8px;
 }
 
+.pill-chain {
+  background: var(--accent-soft);
+  border-color: transparent;
+}
+
 .card .notes {
   margin: 2px 0 0;
   font-size: .9375rem;
