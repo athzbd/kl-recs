@@ -74,15 +74,14 @@ for (const place of data.places) {
   await new Promise((r) => setTimeout(r, 120)); // be polite to the API
 }
 
-// Move permanent closures out of the main list.
-if (closures.length) {
-  const closedIds = new Set(closures.map((p) => p.id));
-  data.places = data.places.filter((p) => !closedIds.has(p.id));
-  data.archive = [
-    ...(data.archive || []),
-    ...closures.map((p) => ({ ...p, archivedOn: today })),
-  ];
-}
+/* Deliberately NOT auto-archiving.
+ *
+ * Text Search matches the wrong venue often enough that a CLOSED_PERMANENTLY
+ * flag is a lead, not a fact — Fifty Tales was reported closed when the real
+ * (Petaling Jaya) branch was trading fine. Silently hiding a place that is
+ * actually open is worse than showing one that has shut, so the status is
+ * recorded, the card shows a "Reported closed" badge, and an issue asks for a
+ * human decision. Archiving stays a deliberate act. */
 
 const summary = {
   checked,

@@ -96,6 +96,10 @@ function cardHtml(place, { archived = false } = {}) {
     place._km !== undefined && place._km !== Infinity
       ? `<span>${formatDistance(place._km)} away</span>` : '',
     archived ? '<span class="badge-closed">Closed</span>' : '',
+    // Google's word, not ours — it has been wrong before, so it is surfaced
+    // rather than acted on.
+    !archived && place.google?.businessStatus === 'CLOSED_PERMANENTLY'
+      ? '<span class="badge-closed">Reported closed</span>' : '',
   ].filter(Boolean).join('');
 
   return `

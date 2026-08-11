@@ -40,7 +40,7 @@ jobs:
             git push
           fi
 
-      - name: Open an issue if anything closed for good
+      - name: Open an issue if anything looks closed
         if: steps.check.outputs.closed_count != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -48,9 +48,16 @@ jobs:
           COUNT: ${{ steps.check.outputs.closed_count }}
         run: |
           gh issue create \
-            --title "$COUNT place(s) permanently closed" \
-            --body "Google now reports these as permanently closed. They've been moved to the archive section:
+            --title "$COUNT place(s) reported closed — needs a human check" \
+            --body "Google reports these as permanently closed:
 
           $CLOSED
 
-          Close this issue once you've had a look."
+          They are still in the list, marked with a \"Reported closed\" badge.
+          Nothing has been archived automatically, because Google sometimes
+          matches the wrong venue — Fifty Tales was reported closed when the
+          Petaling Jaya branch was open.
+
+          If a place really has shut, move it to \`archive\` in data/places.json.
+          If the match is wrong, set \`searchQuery\` on the entry, null its
+          \`google\` block, and re-run the Resolve place IDs workflow."
