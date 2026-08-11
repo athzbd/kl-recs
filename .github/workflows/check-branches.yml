@@ -26,6 +26,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # needed to dispatch the deploy workflow
 
 jobs:
   branches:
