@@ -75,18 +75,36 @@ function shortName(name) {
   return short;
 }
 
+/* How much name is needed before a partial match means anything. Below this,
+   only an exact match counts: "Maya", "XO", "Hide" and "Peep" are ordinary
+   words that appear inside dozens of unrelated Klang Valley businesses. */
+const MIN_PARTIAL = 5;
+
+/* Everyday Malay and English nouns that pass the length test but identify
+   nothing. "Runcit Bar" reduces to "runcit" — sundry shop — which prefixes
+   half the kedai runcit in the Klang Valley. */
+const NOT_A_BRAND = new Set([
+  'runcit', 'kedai', 'warung', 'gerai', 'pasar', 'medan', 'taman', 'bukit',
+  'jalan', 'nasi', 'lemak', 'roti', 'ayam', 'ikan', 'daging', 'makan',
+  'station', 'house', 'garden', 'central', 'village', 'corner', 'place',
+]);
+
 /** Does this result look like the same brand, rather than a coincidence? */
 function sameBrand(entryName, resultName) {
   const a = norm(entryName);
   const b = norm(resultName);
   if (!a || !b) return false;
-  if (b.startsWith(a) || a.startsWith(b) || b.includes(a)) return true;
+  if (a === b) return true;
 
-  /* Fall back to the identifying core. Guarded on length because short cores
-     ("xo", "hide", "peep") collide with unrelated businesses far too easily. */
+  // Prefix only, never "contains": "Nasi Kandar Bestari" contains "bestari"
+  // but is not a branch of it, and bestari is Malay for "smart".
+  if (a.length >= MIN_PARTIAL && b.startsWith(a)) return true;
+  if (b.length >= MIN_PARTIAL && a.startsWith(b)) return true;
+
+  // "FEEKA at The Five" against an entry called "Feeka Coffee Roasters".
   const core = brandCore(entryName);
-  if (core.length < 5) return false;
-  return norm(resultName).includes(core) || brandCore(resultName).includes(core);
+  if (core.length < MIN_PARTIAL || NOT_A_BRAND.has(core)) return false;
+  return b.startsWith(core);
 }
 
 /* Greater Klang Valley. Restricting to it stops Text Search spending its 20
