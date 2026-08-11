@@ -77,15 +77,23 @@
     "Ampang",
     "Bangsar",
     "Batu Caves",
+    "Brickfields",
     "Bukit Bintang",
     "Bukit Jalil",
+    "Cheras",
     "Chinatown",
     "Damansara",
     "Damansara Heights",
     "KLCC",
+    "Kampung Baru",
+    "Kepong",
+    "Mid Valley",
     "Mont Kiara",
     "Petaling Jaya",
     "Pudu",
+    "Sentul",
+    "Setapak",
+    "Shah Alam",
     "Sri Hartamas",
     "TTDI"
   ],
@@ -107,7 +115,11 @@
         "lng": 101.7115639,
         "businessStatus": "OPERATIONAL",
         "address": "Lower Ground (Concourse) Level, Menara Berkembar Petronas, Kuala Lumpur City Centre, 50088 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       },
       "singleLocation": true
     },
@@ -128,7 +140,11 @@
         "lng": 101.6840385,
         "businessStatus": "OPERATIONAL",
         "address": "Gombak, 68100 Batu Caves, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Batu Caves"
+        ]
       },
       "singleLocation": true
     },
@@ -149,7 +165,11 @@
         "lng": 101.69764959999999,
         "businessStatus": "OPERATIONAL",
         "address": "Jalan Petaling, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Chinatown"
+        ]
       },
       "singleLocation": true
     },
@@ -171,7 +191,11 @@
         "lng": 101.69541579999999,
         "businessStatus": "OPERATIONAL",
         "address": "Kuala Lumpur City Centre, 50050 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       },
       "singleLocation": true
     },
@@ -192,7 +216,9 @@
         "lng": 101.6710787,
         "businessStatus": "OPERATIONAL",
         "address": "Jabatan Agama Islam Wilayah Persekutuan, Jln Tuanku Abdul Halim, Kompleks Kerajaan, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       },
       "singleLocation": true
     },
@@ -213,7 +239,9 @@
         "lng": 101.68999919999999,
         "businessStatus": "OPERATIONAL",
         "address": "Islamic Arts Museum Malaysia, Jalan Lembah, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       },
       "singleLocation": true
     },
@@ -235,7 +263,11 @@
         "lng": 101.7084882,
         "businessStatus": null,
         "address": "Changkat Bukit Bintang, Bukit Bintang, Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bukit Bintang"
+        ]
       },
       "searchQuery": "Jalan Changkat Bukit Bintang Kuala Lumpur",
       "singleLocation": true
@@ -258,7 +290,11 @@
         "lng": 101.70927619999999,
         "businessStatus": "OPERATIONAL",
         "address": "64, 亚罗街, Bukit Bintang, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bukit Bintang"
+        ]
       },
       "singleLocation": true
     },
@@ -279,7 +315,11 @@
         "lng": 101.6936592,
         "businessStatus": "OPERATIONAL",
         "address": "Kuala Lumpur City Centre, 50050 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       },
       "singleLocation": true
     },
@@ -300,7 +340,9 @@
         "lng": 101.7168132,
         "businessStatus": "OPERATIONAL",
         "address": "Persiaran TRX, Tun Razak Exchange, 55188 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       },
       "singleLocation": true
     },
@@ -321,7 +363,11 @@
         "lng": 101.7129235,
         "businessStatus": "OPERATIONAL",
         "address": "168, Jln Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bukit Bintang"
+        ]
       },
       "singleLocation": true
     },
@@ -342,7 +388,9 @@
         "lng": 101.6759991,
         "businessStatus": "OPERATIONAL",
         "address": "Lingkaran Syed Putra, Mid Valley City, 59200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       },
       "singleLocation": true
     },
@@ -363,7 +411,11 @@
         "lng": 101.75603729999999,
         "businessStatus": "OPERATIONAL",
         "address": "Lot 7706, Jalan Kolam Air Lama, Mukim, Hulu Kelang, 68000 Ampang, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Ampang"
+        ]
       },
       "singleLocation": true
     },
@@ -384,7 +436,11 @@
         "lng": 101.69848239999999,
         "businessStatus": "OPERATIONAL",
         "address": "80, Jalan Sultan, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Chinatown"
+        ]
       },
       "singleLocation": true
     },
@@ -405,7 +461,9 @@
         "lng": 101.6659172,
         "businessStatus": null,
         "address": "Publika, 1, Jln Solaris Dutamas, Solaris Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       },
       "singleLocation": true
     },
@@ -429,7 +487,11 @@
         "lng": 101.6233261,
         "businessStatus": "OPERATIONAL",
         "address": "5, Jalan SS 21/37, Damansara Utama, 47400 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -452,7 +514,9 @@
         "lng": 101.69065069999999,
         "businessStatus": "OPERATIONAL",
         "address": "Kompleks Makan Tanglin, Gerai, No. 6, Jalan Cenderasari, Wilayah Persekutuan, 50480 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -475,7 +539,15 @@
         "lng": 101.6522442,
         "businessStatus": "OPERATIONAL",
         "address": "No. 1 - G, Wisma CKL, Jalan 22a/70a, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 7,
+        "outletAreas": [
+          "Bangsar",
+          "Bukit Jalil",
+          "KLCC",
+          "Sri Hartamas",
+          "TTDI"
+        ]
       }
     },
     {
@@ -484,7 +556,7 @@
       "categories": [
         "local"
       ],
-      "area": null,
+      "area": "Bangsar",
       "notes": "",
       "tags": [
         "must-eat",
@@ -498,7 +570,15 @@
         "lng": 101.6771059,
         "businessStatus": "OPERATIONAL",
         "address": "Lot 042A & 043A, Third Floor, Lingkaran Syed Putra, Mid Valley City, 58000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 8,
+        "outletAreas": [
+          "Bangsar",
+          "Bukit Bintang",
+          "Mid Valley",
+          "Mont Kiara",
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -521,7 +601,11 @@
         "lng": 101.69741429999999,
         "businessStatus": "OPERATIONAL",
         "address": "Off, Jalan Masjid India, City Centre, 50100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       }
     },
     {
@@ -545,7 +629,13 @@
         "lng": 101.7083621,
         "businessStatus": "OPERATIONAL",
         "address": "113, Jln Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 3,
+        "outletAreas": [
+          "Ampang",
+          "Bangsar",
+          "Sri Hartamas"
+        ]
       }
     },
     {
@@ -568,7 +658,9 @@
         "lng": 101.66564580000001,
         "businessStatus": "OPERATIONAL",
         "address": "A3-G1-01, Ground Floor, Block A3, 1, Jln Dutamas 1, Solaris Dutamas, 50480 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -578,7 +670,7 @@
         "local",
         "latenight"
       ],
-      "area": null,
+      "area": "Bukit Bintang",
       "notes": "Mamak. Closes midnight",
       "tags": [
         "must-eat",
@@ -592,7 +684,13 @@
         "lng": 101.7124825,
         "businessStatus": "OPERATIONAL",
         "address": "2, 2-A & 6, Jalan Dwitasik, Bandar Sri Permaisuri, 56000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 6,
+        "outletAreas": [
+          "Bukit Bintang",
+          "Kampung Baru",
+          "TTDI"
+        ]
       }
     },
     {
@@ -615,7 +713,11 @@
         "lng": 101.6706056,
         "businessStatus": "OPERATIONAL",
         "address": "25, Lorong Ara Kiri 1, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bangsar"
+        ]
       }
     },
     {
@@ -638,7 +740,11 @@
         "lng": 101.6588142,
         "businessStatus": "OPERATIONAL",
         "address": "383, Jalan 5/59, Bukit Gasing, 46000 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -661,7 +767,11 @@
         "lng": 101.697722,
         "businessStatus": "OPERATIONAL",
         "address": "1, Jalan Balai Polis, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       }
     },
     {
@@ -684,7 +794,11 @@
         "lng": 101.6249321,
         "businessStatus": "OPERATIONAL",
         "address": "39, Jalan 20/14, Taman Paramount, 46300 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -707,7 +821,11 @@
         "lng": 101.71639689999999,
         "businessStatus": "OPERATIONAL",
         "address": "238, Jalan Beruang, Pudu, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Pudu"
+        ]
       }
     },
     {
@@ -730,7 +848,11 @@
         "lng": 101.7110496,
         "businessStatus": "OPERATIONAL",
         "address": "30, Jalan Nyonya, Pudu, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Pudu"
+        ]
       }
     },
     {
@@ -753,7 +875,12 @@
         "lng": 101.62988089999999,
         "businessStatus": "OPERATIONAL",
         "address": "29, Jalan 17/45, Seksyen 17, 46400 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Kepong",
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -776,7 +903,11 @@
         "lng": 101.61089129999999,
         "businessStatus": "OPERATIONAL",
         "address": "42, Jalan SS 2/4a, SS 2, 47300 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -799,7 +930,12 @@
         "lng": 101.6710317,
         "businessStatus": "OPERATIONAL",
         "address": "21, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Ampang",
+          "Bangsar"
+        ]
       }
     },
     {
@@ -822,7 +958,11 @@
         "lng": 101.6240483,
         "businessStatus": "OPERATIONAL",
         "address": "7680, Jalan SS 2/24, SS 2, 47300 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 2,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -831,7 +971,7 @@
       "categories": [
         "local"
       ],
-      "area": null,
+      "area": "Bukit Bintang",
       "notes": "Chili pan mee",
       "tags": [
         "must-eat",
@@ -845,7 +985,12 @@
         "lng": 101.6748643,
         "businessStatus": "OPERATIONAL",
         "address": "KL537, Taman Segambut (Barat, Kawasan Perusahaan Segambut, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 2,
+        "outletAreas": [
+          "Bukit Bintang",
+          "Sentul"
+        ]
       }
     },
     {
@@ -854,7 +999,7 @@
       "categories": [
         "local"
       ],
-      "area": null,
+      "area": "Bukit Jalil",
       "notes": "Chili pan mee",
       "tags": [
         "must-eat",
@@ -868,7 +1013,17 @@
         "lng": 101.6981057,
         "businessStatus": "OPERATIONAL",
         "address": "33, Jalan Dewan Sultan Sulaiman 1 Kuala Lumpur MY, Off, Jalan Tuanku Abdul Rahman, Chow Kit, 50300 Kuala Lumpur, WP Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 10,
+        "outletAreas": [
+          "Bukit Jalil",
+          "Cheras",
+          "Kepong",
+          "Mont Kiara",
+          "Petaling Jaya",
+          "Sentul",
+          "Setapak"
+        ]
       }
     },
     {
@@ -877,7 +1032,7 @@
       "categories": [
         "local"
       ],
-      "area": null,
+      "area": "Petaling Jaya",
       "notes": "Malaysian Chinese seafood",
       "tags": [
         "must-eat",
@@ -891,7 +1046,11 @@
         "lng": 101.67569639999999,
         "businessStatus": "OPERATIONAL",
         "address": "Lot KS-5, Taman Evergreen, 4th Miles, Jln Klang Lama, 58200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -914,7 +1073,11 @@
         "lng": 101.6078519,
         "businessStatus": "OPERATIONAL",
         "address": "Lot 13556, Jalan Cempaka, Kampung Sungai Kayu Ara, 47400 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -937,7 +1100,12 @@
         "lng": 101.6124566,
         "businessStatus": "OPERATIONAL",
         "address": "2, Jalan SS 24/13, Taman Megah, 47301 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 2,
+        "outletAreas": [
+          "Ampang",
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -960,7 +1128,11 @@
         "lng": 101.6968023,
         "businessStatus": "OPERATIONAL",
         "address": "86, Jalan Tun H S Lee, City Centre, 50050 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       }
     },
     {
@@ -980,7 +1152,11 @@
         "lng": 101.6503219,
         "businessStatus": "OPERATIONAL",
         "address": "7, Jalan Sri Hartamas 7, Taman Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Sri Hartamas"
+        ]
       }
     },
     {
@@ -1000,7 +1176,11 @@
         "lng": 101.7087205,
         "businessStatus": "OPERATIONAL",
         "address": "39, 亚罗街, Bukit Bintang, 50200 Wilayah Persekutuan, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bukit Bintang"
+        ]
       }
     },
     {
@@ -1020,7 +1200,11 @@
         "lng": 101.64227,
         "businessStatus": "OPERATIONAL",
         "address": "LOT 9B-3, Jalan Kemajuan 12/18, Seksyen 13, 46200 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -1040,7 +1224,16 @@
         "lng": 101.71331769999999,
         "businessStatus": "OPERATIONAL",
         "address": "Lot 1.16, 00, Level 1, 168, Jln Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 7,
+        "outletAreas": [
+          "Bukit Bintang",
+          "Bukit Jalil",
+          "Damansara Heights",
+          "KLCC",
+          "Mid Valley",
+          "Mont Kiara"
+        ]
       }
     },
     {
@@ -1060,7 +1253,17 @@
         "lng": 101.71152200000002,
         "businessStatus": "OPERATIONAL",
         "address": "Lot 414-415 & OS404, Level 4, Menara Berkembar Petronas, Kuala Lumpur City Centre, 50088 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 9,
+        "outletAreas": [
+          "Bukit Bintang",
+          "Bukit Jalil",
+          "Cheras",
+          "Damansara Heights",
+          "KLCC",
+          "Mid Valley",
+          "Sentul"
+        ]
       }
     },
     {
@@ -1080,7 +1283,11 @@
         "lng": 101.66106529999999,
         "businessStatus": "OPERATIONAL",
         "address": "7, Jalan Batai, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Damansara Heights"
+        ]
       }
     },
     {
@@ -1100,7 +1307,20 @@
         "lng": 101.71088309999999,
         "businessStatus": "OPERATIONAL",
         "address": "120-120A, Jln Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 20,
+        "outletAreas": [
+          "Ampang",
+          "Bangsar",
+          "Brickfields",
+          "Bukit Bintang",
+          "Bukit Jalil",
+          "KLCC",
+          "Mid Valley",
+          "Mont Kiara",
+          "Sentul",
+          "Setapak"
+        ]
       }
     },
     {
@@ -1120,7 +1340,11 @@
         "lng": 101.6803012,
         "businessStatus": "OPERATIONAL",
         "address": "Level 41, Alila Bangsar, 58, Jalan Ang Seng, Brickfields, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bangsar"
+        ]
       }
     },
     {
@@ -1140,7 +1364,9 @@
         "lng": 101.719729,
         "businessStatus": "OPERATIONAL",
         "address": "NO. 199, SUITES G-06, GROUND FLOOR, BAR.KAR KL RESTAURANT, Jln Tun Razak, Kuala Lumpur, 50400 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -1160,7 +1386,11 @@
         "lng": 101.6239908,
         "businessStatus": "OPERATIONAL",
         "address": "11a, Jln 20/16, Sea Park, 46300 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -1180,7 +1410,9 @@
         "lng": 101.67727599999999,
         "businessStatus": "OPERATIONAL",
         "address": "5, Jalan 1/109e, Taman Desa Business Park, 58100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -1200,7 +1432,11 @@
         "lng": 101.7058481,
         "businessStatus": "OPERATIONAL",
         "address": "Concourse, Ritz-Carlton Residences, 105, Jln Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Ampang"
+        ]
       }
     },
     {
@@ -1220,7 +1456,11 @@
         "lng": 101.62727910000001,
         "businessStatus": "OPERATIONAL",
         "address": "44, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "TTDI"
+        ]
       }
     },
     {
@@ -1240,7 +1480,11 @@
         "lng": 101.6445164,
         "businessStatus": "OPERATIONAL",
         "address": "M Resort & Hotel, Jln Damansara, Bukit Kiara, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Damansara"
+        ]
       }
     },
     {
@@ -1260,7 +1504,9 @@
         "lng": 101.6747077,
         "businessStatus": "OPERATIONAL",
         "address": "P-11, Taman Bukit Bambu, Off, Lebuhraya Duta - Ulu Kelang, Taman Bamboo, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -1280,7 +1526,9 @@
         "lng": 101.72298370000001,
         "businessStatus": "OPERATIONAL",
         "address": "368B, Micasa All Suite Hotel, Micasa All Suite Hotel, Jln Tun Razak, Taman U Thant, 50400 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -1300,7 +1548,13 @@
         "lng": 101.67316459999999,
         "businessStatus": "OPERATIONAL",
         "address": "Ground Floor, No.11, Jalan Jalil Jaya 7 Jalil Link, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 4,
+        "outletAreas": [
+          "Bukit Jalil",
+          "Kepong",
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -1320,7 +1574,13 @@
         "lng": 101.6509849,
         "businessStatus": "OPERATIONAL",
         "address": "14, Jalan 24/70a, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 4,
+        "outletAreas": [
+          "Kepong",
+          "Setapak",
+          "Sri Hartamas"
+        ]
       }
     },
     {
@@ -1341,7 +1601,11 @@
         "lng": 101.65077,
         "businessStatus": "OPERATIONAL",
         "address": "26, Jalan 24/70a, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Sri Hartamas"
+        ]
       }
     },
     {
@@ -1361,7 +1625,11 @@
         "lng": 101.6501911,
         "businessStatus": "OPERATIONAL",
         "address": "54, Jalan 27/70a, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Sri Hartamas"
+        ]
       },
       "searchQuery": "Makoto Ramen Kuala Lumpur"
     },
@@ -1384,7 +1652,9 @@
         "lng": 101.7129245,
         "businessStatus": "OPERATIONAL",
         "address": "Ground Floor Block C-1, 6, Jalan Kia Peng, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -1393,7 +1663,7 @@
       "categories": [
         "japanese"
       ],
-      "area": null,
+      "area": "Brickfields",
       "notes": "Omakase",
       "tags": [
         "omakase"
@@ -1406,7 +1676,11 @@
         "lng": 101.6887727,
         "businessStatus": "OPERATIONAL",
         "address": "TAKA , Level 3A, The St. Regis, 6, Jalan Stesen Sentral 2, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Brickfields"
+        ]
       }
     },
     {
@@ -1429,7 +1703,11 @@
         "lng": 101.7188394,
         "businessStatus": "OPERATIONAL",
         "address": "Menara Felda, Persiaran KLCC, Kuala Lumpur City Centre, 50088 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       }
     },
     {
@@ -1449,7 +1727,11 @@
         "lng": 101.6300717,
         "businessStatus": "OPERATIONAL",
         "address": "Unit No.2-1, Greens Terrace, Jalan Wan Kadir 3, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "TTDI"
+        ]
       }
     },
     {
@@ -1469,7 +1751,11 @@
         "lng": 101.6239678,
         "businessStatus": "OPERATIONAL",
         "address": "21, Jln 20/16, Paramount Garden, 46300 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       },
       "searchQuery": "Food Lala Thai restaurant Kuala Lumpur"
     },
@@ -1490,7 +1776,11 @@
         "lng": 101.7094092,
         "businessStatus": "OPERATIONAL",
         "address": "Level 12, W, 121, Jln Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Ampang"
+        ]
       }
     },
     {
@@ -1510,7 +1800,9 @@
         "lng": 101.7005911,
         "businessStatus": "OPERATIONAL",
         "address": "Yap Ah Shak House 17 Jalan Yap Ah Shak, Rooftop, Chow Kit, 50300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -1530,7 +1822,11 @@
         "lng": 101.62707999999999,
         "businessStatus": "OPERATIONAL",
         "address": "43-1, Jalan SS 20/11, Damansara Kim, 47400 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -1552,7 +1848,11 @@
         "lng": 101.69790809999999,
         "businessStatus": "OPERATIONAL",
         "address": "First Floor, 147, Jalan Petaling, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Chinatown"
+        ]
       }
     },
     {
@@ -1574,7 +1874,12 @@
         "lng": 101.69748609999999,
         "businessStatus": "OPERATIONAL",
         "address": "5, Jalan Balai Polis, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Chinatown",
+          "KLCC"
+        ]
       }
     },
     {
@@ -1596,7 +1901,11 @@
         "lng": 101.6975702,
         "businessStatus": "OPERATIONAL",
         "address": "Lot 2, Jalan Panggong, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Chinatown"
+        ]
       }
     },
     {
@@ -1618,7 +1927,11 @@
         "lng": 101.6981964,
         "businessStatus": "OPERATIONAL",
         "address": "Ground Floor, 150, Jalan Petaling, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Chinatown"
+        ]
       }
     },
     {
@@ -1638,7 +1951,15 @@
         "lng": 101.71269029999999,
         "businessStatus": "OPERATIONAL",
         "address": "Lot C3 . 10 . 03, 168, Jln Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 5,
+        "outletAreas": [
+          "Ampang",
+          "Bukit Bintang",
+          "Damansara Heights",
+          "KLCC",
+          "Mont Kiara"
+        ]
       }
     },
     {
@@ -1658,7 +1979,11 @@
         "lng": 101.7136857,
         "businessStatus": "OPERATIONAL",
         "address": "145, Jln Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Ampang"
+        ]
       }
     },
     {
@@ -1678,7 +2003,11 @@
         "lng": 101.7051091,
         "businessStatus": "OPERATIONAL",
         "address": "3, Jln Sin Chew Kee, Bukit Bintang, 50150 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bukit Bintang"
+        ]
       }
     },
     {
@@ -1687,7 +2016,7 @@
       "categories": [
         "bars"
       ],
-      "area": null,
+      "area": "Sentul",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -1698,7 +2027,11 @@
         "lng": 101.7005308,
         "businessStatus": "OPERATIONAL",
         "address": "43, Jalan Kamunting, Chow Kit, 50300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Sentul"
+        ]
       }
     },
     {
@@ -1718,7 +2051,11 @@
         "lng": 101.6535038,
         "businessStatus": "OPERATIONAL",
         "address": "61M, Jalan Medan Setia 1, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Damansara Heights"
+        ]
       }
     },
     {
@@ -1738,7 +2075,11 @@
         "lng": 101.6801297,
         "businessStatus": "OPERATIONAL",
         "address": "6-G, Jalan Abdullah, Bangsar, 59000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bangsar"
+        ]
       }
     },
     {
@@ -1758,7 +2099,9 @@
         "lng": 101.70918479999999,
         "businessStatus": "OPERATIONAL",
         "address": "Ground Floor, Wisma Lim Foo Yong, 86, Jalan Raja Chulan, Kuala Lumpur, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -1778,7 +2121,9 @@
         "lng": 101.71374829999999,
         "businessStatus": "OPERATIONAL",
         "address": "Level 59, Banyan Tree Kuala Lumpur, 2, Jalan Conlay, Vertigo, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -1798,7 +2143,11 @@
         "lng": 101.70989850000001,
         "businessStatus": "OPERATIONAL",
         "address": "34 Menara KH, Jln Sultan Ismail, Bukit Bintang, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bukit Bintang"
+        ]
       }
     },
     {
@@ -1818,7 +2167,11 @@
         "lng": 101.6227358,
         "businessStatus": "OPERATIONAL",
         "address": "167B, Jln Aminuddin Baki, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "TTDI"
+        ]
       }
     },
     {
@@ -1838,7 +2191,11 @@
         "lng": 101.69872699999999,
         "businessStatus": "OPERATIONAL",
         "address": "61, Jalan Sultan, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Chinatown"
+        ]
       }
     },
     {
@@ -1847,7 +2204,7 @@
       "categories": [
         "bars"
       ],
-      "area": null,
+      "area": "Sentul",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -1858,7 +2215,11 @@
         "lng": 101.70047729999999,
         "businessStatus": "OPERATIONAL",
         "address": "Third Floor, Yap Ah Shak House, 17, Jalan Yap Ah Shak, Chow Kit, 50300 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Sentul"
+        ]
       }
     },
     {
@@ -1878,7 +2239,11 @@
         "lng": 101.6964495,
         "businessStatus": "OPERATIONAL",
         "address": "145, Jalan Tun H S Lee, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       }
     },
     {
@@ -1898,7 +2263,11 @@
         "lng": 101.6653942,
         "businessStatus": "OPERATIONAL",
         "address": "Jalan Dungun, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Damansara Heights"
+        ]
       },
       "searchQuery": "The Five KPD Kompleks Pejabat Damansara Bukit Damansara",
       "singleLocation": true
@@ -1920,7 +2289,11 @@
         "lng": 101.6285089,
         "businessStatus": "OPERATIONAL",
         "address": "29A, Jalan Wan Kadir 2, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "TTDI"
+        ]
       }
     },
     {
@@ -1940,7 +2313,11 @@
         "lng": 101.62260409999999,
         "businessStatus": "OPERATIONAL",
         "address": "19, Jalan 21/11b, Sea Park, 46300 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       },
       "searchQuery": "Fifty Tales Petaling Jaya Selangor Malaysia"
     },
@@ -1961,7 +2338,11 @@
         "lng": 101.6520221,
         "businessStatus": "OPERATIONAL",
         "address": "Lot 13A, Ground Floor, Arcoris, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Mont Kiara"
+        ]
       }
     },
     {
@@ -1981,7 +2362,11 @@
         "lng": 101.6739348,
         "businessStatus": "OPERATIONAL",
         "address": "B-01, 29, Jalan Riong, APW Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bangsar"
+        ]
       }
     },
     {
@@ -2001,7 +2386,11 @@
         "lng": 101.6644942,
         "businessStatus": "OPERATIONAL",
         "address": "Pejabat Koperasi Damansara, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Damansara Heights"
+        ]
       }
     },
     {
@@ -2010,7 +2399,7 @@
       "categories": [
         "coffee"
       ],
-      "area": null,
+      "area": "Mont Kiara",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -2021,7 +2410,11 @@
         "lng": 101.6664314,
         "businessStatus": "OPERATIONAL",
         "address": "D4-G3-01, Jln Dutamas 1, Solaris Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Mont Kiara"
+        ]
       }
     },
     {
@@ -2030,7 +2423,7 @@
       "categories": [
         "coffee"
       ],
-      "area": null,
+      "area": "Bukit Jalil",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -2041,7 +2434,12 @@
         "lng": 101.7008101,
         "businessStatus": "OPERATIONAL",
         "address": "9, Jalan Yap Ah Shak, Chow Kit, 50300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 2,
+        "outletAreas": [
+          "Bukit Jalil",
+          "Sentul"
+        ]
       }
     },
     {
@@ -2061,7 +2459,12 @@
         "lng": 101.6646283,
         "businessStatus": "OPERATIONAL",
         "address": "B2-01, Kapas Condominium, 3, Jalan Kapas, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 2,
+        "outletAreas": [
+          "Bangsar",
+          "Mont Kiara"
+        ]
       }
     },
     {
@@ -2081,7 +2484,11 @@
         "lng": 101.5950316,
         "businessStatus": "OPERATIONAL",
         "address": "A-G-01, Prima Avenue, The Tube, Jalan PJU 1/39, Dataran Prima, 47301 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -2101,7 +2508,9 @@
         "lng": 101.6833437,
         "businessStatus": "OPERATIONAL",
         "address": "Rivercity Roof Top, Lot 468, G26-A Block G, Rivercity, Jln Sultan Azlan Shah, Jalan Ipoh, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": []
       }
     },
     {
@@ -2121,7 +2530,11 @@
         "lng": 101.6490312,
         "businessStatus": "OPERATIONAL",
         "address": "22, Jalan 30/70a, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Sri Hartamas"
+        ]
       }
     },
     {
@@ -2141,7 +2554,11 @@
         "lng": 101.6709192,
         "businessStatus": "OPERATIONAL",
         "address": "Located inside Vernakular Store, 33, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bangsar"
+        ]
       }
     },
     {
@@ -2150,7 +2567,7 @@
       "categories": [
         "coffee"
       ],
-      "area": null,
+      "area": "KLCC",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -2161,7 +2578,11 @@
         "lng": 101.7171225,
         "businessStatus": "OPERATIONAL",
         "address": "Lot PL.01.0, Level 2, The Exchange TRX, Persiaran TRX, Tun Razak Exchange, 55188 Wilayah Persekutuan, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       }
     },
     {
@@ -2181,7 +2602,11 @@
         "lng": 101.7084482,
         "businessStatus": "OPERATIONAL",
         "address": "19, Jln Mesui, Bukit Bintang, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bukit Bintang"
+        ]
       }
     },
     {
@@ -2201,7 +2626,11 @@
         "lng": 101.71882459999999,
         "businessStatus": "OPERATIONAL",
         "address": "Gate B, LRT Station Ampang Park Kuala Lumpur, Kuala Lumpur, 50450 Wilayah Persekutuan, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Ampang"
+        ]
       }
     },
     {
@@ -2222,7 +2651,11 @@
         "lng": 101.6524616,
         "businessStatus": "OPERATIONAL",
         "address": "Plaza Damansara, 33, Jalan Medan Setia 1, Bukit Damansara, 50490 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Damansara Heights"
+        ]
       }
     },
     {
@@ -2242,7 +2675,11 @@
         "lng": 101.6211067,
         "businessStatus": "OPERATIONAL",
         "address": "25-1, First Floor, Jalan SS 2/30, SS 2, 47300 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -2262,7 +2699,11 @@
         "lng": 101.62605579999999,
         "businessStatus": "OPERATIONAL",
         "address": "75, Jalan SS 2/72, SS 2, 47300 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -2282,7 +2723,11 @@
         "lng": 101.6700309,
         "businessStatus": "OPERATIONAL",
         "address": "20A, Lrg Ara Kiri 2, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bangsar"
+        ]
       }
     },
     {
@@ -2303,7 +2748,11 @@
         "lng": 101.6215677,
         "businessStatus": "OPERATIONAL",
         "address": "47, Jalan SS 2/30, SS 2, 47300 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -2323,7 +2772,11 @@
         "lng": 101.69639269999999,
         "businessStatus": "OPERATIONAL",
         "address": "181, Jalan Tun H S Lee, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "KLCC"
+        ]
       }
     },
     {
@@ -2343,7 +2796,11 @@
         "lng": 101.6372732,
         "businessStatus": "OPERATIONAL",
         "address": "Unit 15-10, The Gasket Alley, Lot 15, Jln 13/6, Section 13, 46200 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -2363,7 +2820,15 @@
         "lng": 101.6654726,
         "businessStatus": "OPERATIONAL",
         "address": "Level GF, Block A, The Five @ KPD, Jalan Dungun, Bukit Damansara, 50490 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 6,
+        "outletAreas": [
+          "Bukit Bintang",
+          "Damansara Heights",
+          "KLCC",
+          "Mont Kiara",
+          "Sentul"
+        ]
       }
     },
     {
@@ -2383,7 +2848,12 @@
         "lng": 101.7256122,
         "businessStatus": "OPERATIONAL",
         "address": "204A, Jln Ampang, Kampung Datuk Keramat, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 2,
+        "outletAreas": [
+          "Ampang",
+          "KLCC"
+        ]
       }
     },
     {
@@ -2392,7 +2862,7 @@
       "categories": [
         "dessert"
       ],
-      "area": null,
+      "area": "Ampang",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -2403,7 +2873,14 @@
         "lng": 101.6793216,
         "businessStatus": "OPERATIONAL",
         "address": "Lot B-2, Taman Tunku, Off, Jln Langgak Tunku, Bukit Tunku, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 6,
+        "outletAreas": [
+          "Ampang",
+          "Bangsar",
+          "KLCC",
+          "TTDI"
+        ]
       }
     },
     {
@@ -2423,7 +2900,11 @@
         "lng": 101.6263678,
         "businessStatus": "OPERATIONAL",
         "address": "21, Jalan SS 20/11, Damansara Kim, 47400 Petaling Jaya, Selangor",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Petaling Jaya"
+        ]
       }
     },
     {
@@ -2444,7 +2925,18 @@
         "lng": 101.7031452,
         "businessStatus": "OPERATIONAL",
         "address": "Unit G-01, Sunway Tower, 86, Jln Ampang, Kuala Lumpur, 50300 Kuala Lumpur, Federal Territory of Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 16,
+        "outletAreas": [
+          "Ampang",
+          "Bukit Bintang",
+          "Cheras",
+          "Damansara Heights",
+          "Kepong",
+          "Mont Kiara",
+          "Petaling Jaya",
+          "Shah Alam"
+        ]
       }
     },
     {
@@ -2465,7 +2957,11 @@
         "lng": 101.6709784,
         "businessStatus": "OPERATIONAL",
         "address": "43, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
+        "lastChecked": "2026-08-11",
+        "outlets": 1,
+        "outletAreas": [
+          "Bangsar"
+        ]
       }
     }
   ],
