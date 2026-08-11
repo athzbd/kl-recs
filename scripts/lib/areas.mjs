@@ -45,6 +45,8 @@ export const AREA_PATTERNS = [
   [/ampang|keramat/i, 'Ampang'],
   [/mid valley|bangsar south|kerinchi/i, 'Mid Valley'],
   [/\bss\s?\d|petaling jaya|\bPJ\b|damansara utama|uptown|taman sea|sea park|paramount/i, 'Petaling Jaya'],
+  [/desa park ?city|desa park/i, 'Desa ParkCity'],
+  [/sunway/i, 'Sunway'],
   [/kota damansara|\bPJU\s?5\b/i, 'Kota Damansara'],
   [/puchong/i, 'Puchong'],
   [/kajang/i, 'Kajang'],

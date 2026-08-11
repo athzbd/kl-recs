@@ -85,6 +85,7 @@
     "Chinatown",
     "Damansara",
     "Damansara Heights",
+    "Desa ParkCity",
     "KLCC",
     "Kajang",
     "Kampung Baru",
@@ -104,6 +105,7 @@
     "Shah Alam",
     "Sri Hartamas",
     "Subang",
+    "Sunway",
     "TTDI",
     "Taman Desa"
   ],
@@ -2513,7 +2515,7 @@
       "categories": [
         "coffee"
       ],
-      "area": "Bukit Jalil",
+      "area": "KLCC",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -2527,10 +2529,23 @@
         "lastChecked": "2026-08-11",
         "outlets": 6,
         "outletAreas": [
-          "Bukit Bintang",
           "Bukit Jalil",
-          "Petaling Jaya",
-          "Sentul"
+          "Desa ParkCity",
+          "KLCC",
+          "Puchong",
+          "Sentul",
+          "Sunway"
+        ]
+      },
+      "branchesOverride": {
+        "outlets": 6,
+        "areas": [
+          "Bukit Jalil",
+          "Sentul",
+          "Desa ParkCity",
+          "Puchong",
+          "Sunway",
+          "KLCC"
         ]
       }
     },
