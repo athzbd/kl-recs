@@ -16,9 +16,10 @@ const DATA_PATH = new URL('../data/places.json', import.meta.url);
 const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 const DRY_RUN = process.argv.includes('--dry-run');
 
-// Keep this list tight — every extra field can raise the billing tier.
-// Drop `rating,regularOpeningHours` to fall back to the cheaper SKU.
-const FIELD_MASK = 'id,displayName,businessStatus,location,rating,regularOpeningHours';
+// Keep this tight — every extra field can raise the billing tier.
+// `regularOpeningHours` and `rating` are deliberately absent: they push the
+// request into the priciest SKU and nothing on the page uses them.
+const FIELD_MASK = 'id,displayName,businessStatus,location,formattedAddress';
 
 if (!API_KEY) {
   console.error('Missing GOOGLE_MAPS_API_KEY.');
@@ -62,8 +63,7 @@ for (const place of data.places) {
     place.google.businessStatus = result.businessStatus ?? null;
     place.google.lat = result.location?.latitude ?? place.google.lat;
     place.google.lng = result.location?.longitude ?? place.google.lng;
-    place.google.rating = result.rating ?? null;
-    place.google.hours = result.regularOpeningHours?.periods ?? null;
+    place.google.address = result.formattedAddress ?? place.google.address;
     place.google.lastChecked = today;
 
     if (result.businessStatus === 'CLOSED_PERMANENTLY') closures.push(place);

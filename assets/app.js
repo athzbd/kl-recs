@@ -1,105 +1,64 @@
-/* KL Recs — static list + map with client-side filtering.
+/* KL Recs — static list + Google map with client-side filtering.
    Data comes from data/places.json. No build step, no backend. */
-
-const KL_TZ = 'Asia/Kuala_Lumpur';
 
 const state = {
   data: null,
   categories: new Set(),
   area: '',
   search: '',
-  openNow: false,
+  mustEat: false,
   nearMe: false,
   origin: null,      // {lat, lng} once geolocation resolves
   view: 'list',
 };
 
 let map = null;
-let markerLayer = null;
+let infoWindow = null;
+let markers = [];
+let clusterer = null;
+let mapsReady = null;   // promise, created on first map view
 
 /* ---------------- helpers ---------------- */
 
 const $ = (id) => document.getElementById(id);
 
-function stars(n) {
-  if (!n) return '';
-  return '★'.repeat(n) + '☆'.repeat(Math.max(0, 5 - n));
-}
-
-function priceLabel(p) {
-  return p > 0 ? '$'.repeat(p) : null;
-}
+const escapeHtml = (s) =>
+  String(s).replace(/[&<>"']/g, (c) =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 function haversineKm(a, b) {
   const R = 6371;
   const dLat = (b.lat - a.lat) * Math.PI / 180;
   const dLng = (b.lng - a.lng) * Math.PI / 180;
-  const lat1 = a.lat * Math.PI / 180;
-  const lat2 = b.lat * Math.PI / 180;
-  const h = Math.sin(dLat / 2) ** 2 + Math.sin(dLng / 2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
+  const h = Math.sin(dLat / 2) ** 2
+    + Math.sin(dLng / 2) ** 2 * Math.cos(a.lat * Math.PI / 180) * Math.cos(b.lat * Math.PI / 180);
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
-function formatDistance(km) {
-  return km < 1 ? `${Math.round(km * 1000)} m` : `${km.toFixed(1)} km`;
-}
+const formatDistance = (km) =>
+  km < 1 ? `${Math.round(km * 1000)} m` : `${km.toFixed(1)} km`;
 
-/** Current time in Kuala Lumpur, regardless of where the viewer is. */
-function nowInKL() {
-  const parts = new Intl.DateTimeFormat('en-GB', {
-    timeZone: KL_TZ, weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false,
-  }).formatToParts(new Date());
-  const get = (t) => parts.find((p) => p.type === t)?.value;
-  const days = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
-  return {
-    day: days[get('weekday')],
-    minutes: Number(get('hour')) * 60 + Number(get('minute')),
-  };
-}
-
-/** Google periods: [{open:{day,hour,minute}, close:{day,hour,minute}}]. Handles overnight. */
-function isOpenNow(hours) {
-  if (!Array.isArray(hours) || hours.length === 0) return null;
-  const now = nowInKL();
-  const nowAbs = now.day * 1440 + now.minutes;
-
-  return hours.some((period) => {
-    if (!period.open) return true; // open 24/7
-    const start = period.open.day * 1440 + period.open.hour * 60 + (period.open.minute || 0);
-    if (!period.close) return true;
-    let end = period.close.day * 1440 + period.close.hour * 60 + (period.close.minute || 0);
-    if (end <= start) end += 7 * 1440; // wraps past midnight / end of week
-    const probe = nowAbs < start ? nowAbs + 7 * 1440 : nowAbs;
-    return probe >= start && probe < end;
-  });
-}
-
-function mapsSearchUrl(place) {
+function mapsUrl(place, mode) {
   const q = encodeURIComponent(`${place.name} Kuala Lumpur`);
   const pid = place.google?.placeId;
-  return pid
-    ? `https://www.google.com/maps/search/?api=1&query=${q}&query_place_id=${pid}`
-    : `https://www.google.com/maps/search/?api=1&query=${q}`;
-}
-
-function mapsDirectionsUrl(place) {
-  const q = encodeURIComponent(`${place.name} Kuala Lumpur`);
-  const pid = place.google?.placeId;
-  return pid
-    ? `https://www.google.com/maps/dir/?api=1&destination=${q}&destination_place_id=${pid}`
-    : `https://www.google.com/maps/dir/?api=1&destination=${q}`;
+  if (mode === 'directions') {
+    return `https://www.google.com/maps/dir/?api=1&destination=${q}`
+      + (pid ? `&destination_place_id=${pid}` : '');
+  }
+  return `https://www.google.com/maps/search/?api=1&query=${q}`
+    + (pid ? `&query_place_id=${pid}` : '');
 }
 
 /* ---------------- filtering ---------------- */
 
 function visiblePlaces() {
-  const { data, categories, area, search, openNow, nearMe, origin } = state;
+  const { data, categories, area, search, mustEat, nearMe, origin } = state;
   const term = search.trim().toLowerCase();
 
   let out = data.places.filter((p) => {
     if (categories.size && !p.categories.some((c) => categories.has(c))) return false;
     if (area && p.area !== area) return false;
-    if (openNow && isOpenNow(p.google?.hours) !== true) return false;
+    if (mustEat && !(p.tags || []).includes('must-eat')) return false;
     if (term) {
       const hay = [p.name, p.notes, p.area, ...(p.tags || []), ...p.categories]
         .join(' ').toLowerCase();
@@ -110,10 +69,15 @@ function visiblePlaces() {
 
   if (nearMe && origin) {
     out = out
-      .map((p) => ({ ...p, _km: p.google?.lat ? haversineKm(origin, { lat: p.google.lat, lng: p.google.lng }) : Infinity }))
+      .map((p) => ({
+        ...p,
+        _km: p.google?.lat != null
+          ? haversineKm(origin, { lat: p.google.lat, lng: p.google.lng })
+          : Infinity,
+      }))
       .sort((a, b) => a._km - b._km);
   } else {
-    out = [...out].sort((a, b) => (b.rating || 0) - (a.rating || 0) || a.name.localeCompare(b.name));
+    out = [...out].sort((a, b) => a.name.localeCompare(b.name));
   }
 
   return out;
@@ -123,37 +87,29 @@ function visiblePlaces() {
 
 function cardHtml(place, { archived = false } = {}) {
   const cats = state.data.categories.filter((c) => place.categories.includes(c.id));
-  const open = archived ? null : isOpenNow(place.google?.hours);
-  const price = priceLabel(place.price);
+  const dishTags = (place.tags || []).filter((t) => t !== 'must-eat');
 
   const meta = [
     ...cats.map((c) => `<span class="pill">${c.icon} ${c.label}</span>`),
-    place.area ? `<span class="pill">${place.area}</span>` : '',
-    price ? `<span>${price}</span>` : '',
-    place._km !== undefined && place._km !== Infinity ? `<span>${formatDistance(place._km)} away</span>` : '',
-    open === true ? '<span class="badge-open">Open now</span>' : '',
-    open === false ? '<span class="badge-shut">Closed now</span>' : '',
-    archived ? '<span class="badge-closed">Permanently closed</span>' : '',
+    place.area ? `<span class="pill">${escapeHtml(place.area)}</span>` : '',
+    (place.tags || []).includes('must-eat') ? '<span class="badge-must">Must eat</span>' : '',
+    place._km !== undefined && place._km !== Infinity
+      ? `<span>${formatDistance(place._km)} away</span>` : '',
+    archived ? '<span class="badge-closed">Closed</span>' : '',
   ].filter(Boolean).join('');
 
   return `
     <li class="card">
-      <div class="card-top">
-        <h3>${escapeHtml(place.name)}</h3>
-        <span class="stars">${stars(place.rating)}</span>
-      </div>
+      <div class="card-top"><h3>${escapeHtml(place.name)}</h3></div>
       <div class="card-meta">${meta}</div>
       ${place.notes ? `<p class="notes">${escapeHtml(place.notes)}</p>` : ''}
+      ${dishTags.length
+        ? `<p class="tags">${dishTags.map((t) => `#${escapeHtml(t)}`).join(' ')}</p>` : ''}
       <div class="card-actions">
-        <a href="${mapsSearchUrl(place)}" target="_blank" rel="noopener">View on Maps</a>
-        <a href="${mapsDirectionsUrl(place)}" target="_blank" rel="noopener">Directions</a>
+        <a href="${mapsUrl(place)}" target="_blank" rel="noopener">View on Maps</a>
+        <a href="${mapsUrl(place, 'directions')}" target="_blank" rel="noopener">Directions</a>
       </div>
     </li>`;
-}
-
-function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, (c) =>
-    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
 function render() {
@@ -166,40 +122,93 @@ function render() {
   $('result-count').textContent =
     places.length === total ? `${total} places` : `${places.length} of ${total} places`;
 
-  const filtered = state.categories.size || state.area || state.search || state.openNow || state.nearMe;
-  $('clear-filters').hidden = !filtered;
+  $('clear-filters').hidden =
+    !(state.categories.size || state.area || state.search || state.mustEat || state.nearMe);
 
-  if (state.view === 'map') renderMap(places);
+  if (state.view === 'map') drawMarkers(places);
 }
 
-function renderMap(places) {
+/* ---------------- google map ---------------- */
+
+function loadGoogleMaps() {
+  if (mapsReady) return mapsReady;
+
+  const key = window.KLRECS?.mapsKey;
+  if (!key || key.startsWith('__')) {
+    mapsReady = Promise.reject(new Error('no-key'));
+    return mapsReady;
+  }
+
+  mapsReady = new Promise((resolve, reject) => {
+    window.__klrecsMapInit = resolve;
+    const s = document.createElement('script');
+    s.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(key)}`
+      + '&loading=async&callback=__klrecsMapInit';
+    s.async = true;
+    s.onerror = () => reject(new Error('script-failed'));
+    document.head.appendChild(s);
+  });
+
+  return mapsReady;
+}
+
+async function drawMarkers(places) {
+  try {
+    await loadGoogleMaps();
+  } catch {
+    $('map').hidden = true;
+    $('map-fallback').hidden = false;
+    return;
+  }
+
   const { defaultCenter, defaultZoom } = state.data.meta;
 
   if (!map) {
-    map = L.map('map').setView([defaultCenter.lat, defaultCenter.lng], defaultZoom);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      maxZoom: 19,
-    }).addTo(map);
-    markerLayer = L.layerGroup().addTo(map);
+    map = new google.maps.Map($('map'), {
+      center: defaultCenter,
+      zoom: defaultZoom,
+      mapTypeControl: false,
+      streetViewControl: false,
+      fullscreenControl: false,
+    });
+    infoWindow = new google.maps.InfoWindow();
   }
 
-  markerLayer.clearLayers();
+  markers.forEach((m) => m.setMap(null));
+  clusterer?.clearMarkers();
+  markers = [];
+
   const located = places.filter((p) => p.google?.lat != null && p.google?.lng != null);
 
-  located.forEach((p) => {
-    L.marker([p.google.lat, p.google.lng])
-      .bindPopup(`
-        <h3>${escapeHtml(p.name)}</h3>
-        <p>${escapeHtml(p.notes || '')}</p>
-        <a href="${mapsDirectionsUrl(p)}" target="_blank" rel="noopener">Directions →</a>`)
-      .addTo(markerLayer);
+  markers = located.map((p) => {
+    const marker = new google.maps.Marker({
+      position: { lat: p.google.lat, lng: p.google.lng },
+      title: p.name,
+    });
+    marker.addListener('click', () => {
+      infoWindow.setContent(`
+        <div class="iw">
+          <h3>${escapeHtml(p.name)}</h3>
+          ${p.notes ? `<p>${escapeHtml(p.notes)}</p>` : ''}
+          <a href="${mapsUrl(p, 'directions')}" target="_blank" rel="noopener">Directions →</a>
+        </div>`);
+      infoWindow.open({ map, anchor: marker });
+    });
+    return marker;
   });
 
-  if (located.length) {
-    map.fitBounds(L.latLngBounds(located.map((p) => [p.google.lat, p.google.lng])).pad(0.15));
+  if (window.markerClusterer?.MarkerClusterer) {
+    clusterer?.setMap(null);
+    clusterer = new window.markerClusterer.MarkerClusterer({ map, markers });
+  } else {
+    markers.forEach((m) => m.setMap(map));
   }
-  setTimeout(() => map.invalidateSize(), 0);
+
+  if (located.length) {
+    const bounds = new google.maps.LatLngBounds();
+    located.forEach((p) => bounds.extend({ lat: p.google.lat, lng: p.google.lng }));
+    map.fitBounds(bounds, 40);
+  }
 }
 
 /* ---------------- setup ---------------- */
@@ -211,13 +220,23 @@ function buildControls() {
   $('site-subtitle').textContent = meta.subtitle;
   document.title = meta.title;
 
+  $('tips').innerHTML = (meta.tips || [])
+    .map((t) => `<li>‼️ ${escapeHtml(t)}</li>`).join('');
+
   $('category-chips').innerHTML = categories
     .map((c) => `<button class="chip" data-cat="${c.id}" aria-pressed="false">${c.icon} ${c.label}</button>`)
     .join('');
 
+  const known = areas?.length
+    ? areas
+    : [...new Set(state.data.places.map((p) => p.area).filter(Boolean))].sort();
+
   $('area-filter').innerHTML =
-    '<option value="">All areas</option>' +
-    areas.map((a) => `<option value="${a}">${a}</option>`).join('');
+    '<option value="">All areas</option>'
+    + known.map((a) => `<option value="${escapeHtml(a)}">${escapeHtml(a)}</option>`).join('');
+
+  $('area-filter').parentElement.hidden = false;
+  if (!known.length) $('area-filter').hidden = true;
 }
 
 function wireEvents() {
@@ -242,9 +261,9 @@ function wireEvents() {
     debounce = setTimeout(() => { state.search = e.target.value; render(); }, 120);
   });
 
-  $('open-now').addEventListener('click', (e) => {
-    state.openNow = !state.openNow;
-    e.currentTarget.setAttribute('aria-pressed', String(state.openNow));
+  $('must-eat').addEventListener('click', (e) => {
+    state.mustEat = !state.mustEat;
+    e.currentTarget.setAttribute('aria-pressed', String(state.mustEat));
     render();
   });
 
@@ -253,8 +272,7 @@ function wireEvents() {
     if (state.nearMe) {
       state.nearMe = false;
       btn.setAttribute('aria-pressed', 'false');
-      render();
-      return;
+      return render();
     }
     btn.textContent = '📍 Locating…';
     try {
@@ -271,14 +289,12 @@ function wireEvents() {
   });
 
   $('clear-filters').addEventListener('click', () => {
+    Object.assign(state, { area: '', search: '', mustEat: false, nearMe: false });
     state.categories.clear();
-    state.area = '';
-    state.search = '';
-    state.openNow = false;
-    state.nearMe = false;
     $('search').value = '';
     $('area-filter').value = '';
-    document.querySelectorAll('[aria-pressed="true"]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+    document.querySelectorAll('[aria-pressed="true"]')
+      .forEach((b) => b.setAttribute('aria-pressed', 'false'));
     render();
   });
 

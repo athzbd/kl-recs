@@ -22,6 +22,20 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+
+      # The browser key is public by necessity, but keeping it out of git means
+      # it never lands in history and can be rotated from the repo settings.
+      - name: Inject the Maps browser key
+        env:
+          KEY: ${{ secrets.GOOGLE_MAPS_BROWSER_KEY }}
+        run: |
+          if [ -n "$KEY" ]; then
+            sed -i "s|__GOOGLE_MAPS_BROWSER_KEY__|$KEY|" assets/config.js
+            echo "Key injected."
+          else
+            echo "No GOOGLE_MAPS_BROWSER_KEY set — the map will show setup instructions."
+          fi
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -1,45 +1,60 @@
 # KL Recs
 
-Static site listing Kuala Lumpur recommendations. No build step, no framework,
-no backend. Hosted on GitHub Pages at https://athzbd.github.io/kl-recs/
+Static site listing Kuala Lumpur recommendations for visitors. No build step, no
+framework, no backend. Hosted on GitHub Pages at https://athzbd.github.io/kl-recs/
+
+Source of the list: Athena's Notes app export, migrated 2026-08-11. The original
+note was dated 2026-08-04, which is what migrated entries carry as `added`.
 
 ## Layout
 
-- `data/places.json` — the single source of truth
+- `data/places.json` — the single source of truth (117 places + archive)
 - `index.html`, `assets/app.js`, `assets/styles.css` — the page
-- `scripts/*.mjs` — Node scripts run by GitHub Actions (Node 20+, no deps)
+- `assets/config.js` — Maps browser key placeholder, substituted on deploy
+- `scripts/*.mjs` — Node scripts (Node 20+, no dependencies)
 - `.github/workflows/` — deploy on push to main; weekly place check
 
 ## Rules that matter
 
-**Never write to a place's `google` block by hand.** It is owned by
-`scripts/check-places.mjs`. Conversely, that script must never touch
-`name`, `notes`, `rating`, `categories`, `tags`, or `area` — those are the
-user's own words and judgements.
+**Never invent the user's opinions.** `notes`, `tags` and `categories` come from
+her own list. If something has no note, leave it empty — do not write a
+description, a rating, or a recommendation she did not make. There is no
+`rating` field for exactly this reason: she never rated anything.
+
+**Never hand-edit a place's `google` block.** It is owned by
+`scripts/check-places.mjs` and `scripts/resolve-place-ids.mjs`. Those scripts
+must never touch `name`, `notes`, `categories` or `tags`. They may set `area`
+only when it is currently null.
 
 **No build step.** Don't introduce npm, bundlers, or a framework without asking.
 Editing a file and pushing is the entire deploy process, and that is deliberate.
 
-**Leaflet + OpenStreetMap for map tiles; Google only for data.** The Google API
-key lives in GitHub Actions secrets and must never reach the browser.
+**Two Google keys, different exposure.** `GOOGLE_MAPS_API_KEY` (server, Places
+API) stays in Actions secrets and must never reach the browser.
+`GOOGLE_MAPS_BROWSER_KEY` (Maps JavaScript) is public by necessity — it is
+injected into `assets/config.js` at deploy time and protected by an HTTP
+referrer restriction plus a daily quota cap.
 
-**Keep `FIELD_MASK` in `check-places.mjs` minimal** — each extra field can move
-the request into a more expensive billing tier.
+**Keep `FIELD_MASK` in `check-places.mjs` minimal.** Opening hours and Google's
+rating were deliberately removed — they raise the billing tier and nothing on
+the page uses them. Adding a field costs real money.
 
 ## Adding a place
 
-When the user asks to add somewhere, append to `places` in `data/places.json`:
-kebab-case `id`, today's date for `added`/`updated`, `google.placeId` set to
-`null`. Then run the resolver if a key is available, otherwise leave it null —
-the weekly job will skip it and report it as missing.
-
-Categories and areas must come from the `categories` / `areas` lists already in
-the JSON. Add a new one to those lists first if nothing fits.
+Append to `places` in `data/places.json`: kebab-case `id`, today's date for
+`added`/`updated`, `google.placeId` null, `area` null. Categories must come from
+the `categories` list already in the JSON; add a new one there first if nothing
+fits. Dish-level tags (`nasi-lemak`, `mamak`, `laksa`, `chicken-rice`,
+`banana-leaf`, `chili-pan-mee`, `seafood`, `beef-noodle`, `kopitiam`, `durian`,
+`omakase`) are free-form — reuse an existing one where it applies.
 
 ## Checking work
 
 ```bash
 node --check assets/app.js
 node -e "JSON.parse(require('fs').readFileSync('data/places.json','utf8'))"
-python3 -m http.server 8000   # then open http://localhost:8000
+node scripts/serve.mjs   # then open http://localhost:8000
 ```
+
+The map cannot be verified locally — there is no browser key outside deploys.
+Verify map changes on the live site after a push.

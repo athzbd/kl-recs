@@ -1,8 +1,10 @@
 {
-  "$schema": "./schema.json",
   "meta": {
     "title": "KL Recs",
-    "subtitle": "Places we actually recommend",
+    "subtitle": "Kuala Lumpur, for visitors 🇲🇾",
+    "tips": [
+      "Download the Grab app before you arrive."
+    ],
     "defaultCenter": {
       "lat": 3.1478,
       "lng": 101.6953
@@ -11,39 +13,9 @@
   },
   "categories": [
     {
-      "id": "coffee",
-      "label": "Coffee",
-      "icon": "☕"
-    },
-    {
-      "id": "local",
-      "label": "Local",
-      "icon": "🍜"
-    },
-    {
-      "id": "brunch",
-      "label": "Brunch",
-      "icon": "🥐"
-    },
-    {
-      "id": "dinner",
-      "label": "Dinner",
-      "icon": "🍽️"
-    },
-    {
-      "id": "fancy",
-      "label": "Fancy",
-      "icon": "🥂"
-    },
-    {
-      "id": "bar",
-      "label": "Bars",
-      "icon": "🍸"
-    },
-    {
-      "id": "dessert",
-      "label": "Dessert",
-      "icon": "🍰"
+      "id": "sights",
+      "label": "Sights",
+      "icon": "♨️"
     },
     {
       "id": "shopping",
@@ -51,84 +23,2524 @@
       "icon": "🛍️"
     },
     {
-      "id": "sights",
-      "label": "Sights",
-      "icon": "📸"
+      "id": "local",
+      "label": "Local",
+      "icon": "🍛"
     },
     {
-      "id": "activity",
-      "label": "Do",
-      "icon": "🎟️"
+      "id": "fancy",
+      "label": "Fancy",
+      "icon": "🦪"
+    },
+    {
+      "id": "japanese",
+      "label": "Japanese",
+      "icon": "🍣"
+    },
+    {
+      "id": "thai",
+      "label": "Thai",
+      "icon": "🇹🇭"
+    },
+    {
+      "id": "bars",
+      "label": "Bars",
+      "icon": "🍸"
+    },
+    {
+      "id": "wine",
+      "label": "Wine",
+      "icon": "🍷"
+    },
+    {
+      "id": "coffee",
+      "label": "Coffee",
+      "icon": "☕️"
+    },
+    {
+      "id": "matcha",
+      "label": "Matcha",
+      "icon": "🍵"
+    },
+    {
+      "id": "dessert",
+      "label": "Dessert",
+      "icon": "🥐"
+    },
+    {
+      "id": "latenight",
+      "label": "Late night",
+      "icon": "🌃"
     }
   ],
-  "areas": [
-    "KLCC",
-    "Bukit Bintang",
-    "Chinatown",
-    "Kampung Baru",
-    "Bangsar",
-    "TTDI",
-    "Mont Kiara",
-    "Damansara",
-    "Petaling Jaya",
-    "Sentul",
-    "Cheras",
-    "Ampang",
-    "Subang",
-    "Other"
-  ],
+  "areas": [],
   "places": [
     {
-      "id": "sample-merchants-lane",
-      "name": "Merchant's Lane",
-      "categories": [
-        "coffee",
-        "brunch"
-      ],
-      "area": "Chinatown",
-      "price": 2,
-      "rating": 4,
-      "notes": "SAMPLE ENTRY — replace with your own. Upstairs shophouse cafe off Jalan Petaling.",
-      "tags": [
-        "sample"
-      ],
-      "added": "2026-08-11",
-      "updated": "2026-08-11",
-      "google": {
-        "placeId": null,
-        "lat": 3.1436,
-        "lng": 101.6975,
-        "businessStatus": null,
-        "rating": null,
-        "hours": null,
-        "lastChecked": null
-      }
-    },
-    {
-      "id": "sample-petronas-towers",
+      "id": "petronas-twin-towers",
       "name": "Petronas Twin Towers",
       "categories": [
         "sights"
       ],
-      "area": "KLCC",
-      "price": 0,
-      "rating": 4,
-      "notes": "SAMPLE ENTRY — replace with your own. Skybridge tickets sell out early.",
-      "tags": [
-        "sample"
-      ],
-      "added": "2026-08-11",
-      "updated": "2026-08-11",
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
       "google": {
         "placeId": null,
-        "lat": 3.15785,
-        "lng": 101.71167,
+        "lat": null,
+        "lng": null,
         "businessStatus": null,
-        "rating": null,
-        "hours": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "batu-caves",
+      "name": "Batu Caves",
+      "categories": [
+        "sights"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "petaling-street",
+      "name": "Petaling Street",
+      "categories": [
+        "sights"
+      ],
+      "area": null,
+      "notes": "Chinatown",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "central-market",
+      "name": "Central Market",
+      "categories": [
+        "sights",
+        "shopping"
+      ],
+      "area": null,
+      "notes": "Local handicrafts, souvenirs",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "masjid-wilayah",
+      "name": "Masjid Wilayah",
+      "categories": [
+        "sights"
+      ],
+      "area": null,
+      "notes": "Must wear long trousers",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "islamic-arts-museum",
+      "name": "Islamic Arts Museum",
+      "categories": [
+        "sights"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "changkat-bukit-bintang",
+      "name": "Changkat Bukit Bintang",
+      "categories": [
+        "sights",
+        "bars"
+      ],
+      "area": null,
+      "notes": "Main strip of bars",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "jalan-alor",
+      "name": "Jalan Alor",
+      "categories": [
+        "sights",
+        "local"
+      ],
+      "area": null,
+      "notes": "Street food",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "merdeka-square",
+      "name": "Merdeka Square",
+      "categories": [
+        "sights"
+      ],
+      "area": null,
+      "notes": "Independence Square",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "trx",
+      "name": "TRX",
+      "categories": [
+        "shopping"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "pavilion-mall",
+      "name": "Pavilion Mall",
+      "categories": [
+        "shopping"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "gardens-mall",
+      "name": "Gardens Mall",
+      "categories": [
+        "shopping"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "the-campus-ampang",
+      "name": "The Campus Ampang",
+      "categories": [
+        "shopping"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "rexkl",
+      "name": "RexKL",
+      "categories": [
+        "shopping"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "publika",
+      "name": "Publika",
+      "categories": [
+        "shopping"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "village-park-nasi-lemak",
+      "name": "Village Park Nasi Lemak",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [
+        "must-eat",
+        "nasi-lemak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "tanglin-nasi-lemak",
+      "name": "Tanglin Nasi Lemak",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [
+        "must-eat",
+        "nasi-lemak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "nasi-lemak-burung-hantu",
+      "name": "Nasi Lemak Burung Hantu",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [
+        "must-eat",
+        "nasi-lemak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "nasi-lemak-shop",
+      "name": "Nasi Lemak Shop",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [
+        "must-eat",
+        "nasi-lemak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "mansion-tea-stall",
+      "name": "Mansion Tea Stall",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Mamak — roti canai, mee mamak, maggi goreng",
+      "tags": [
+        "must-eat",
+        "mamak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "pelita",
+      "name": "Pelita",
+      "categories": [
+        "local",
+        "latenight"
+      ],
+      "area": null,
+      "notes": "Mamak. Open 24 hours",
+      "tags": [
+        "must-eat",
+        "mamak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "bestari",
+      "name": "Bestari",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Mamak",
+      "tags": [
+        "must-eat",
+        "mamak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "q-bistro",
+      "name": "Q Bistro",
+      "categories": [
+        "local",
+        "latenight"
+      ],
+      "area": null,
+      "notes": "Mamak. Closes midnight",
+      "tags": [
+        "must-eat",
+        "mamak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "bala-s-banana-leaf",
+      "name": "Bala's Banana Leaf",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Mamak",
+      "tags": [
+        "must-eat",
+        "mamak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "raju-s-banana-leaf",
+      "name": "Raju's Banana Leaf",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Mamak",
+      "tags": [
+        "must-eat",
+        "mamak"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "ho-kow-kopitiam",
+      "name": "Ho Kow Kopitiam",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [
+        "must-eat",
+        "kopitiam"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "oands-curry-mee",
+      "name": "O&S Curry Mee",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [
+        "must-eat",
+        "laksa"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "little-eat-stall",
+      "name": "Little Eat Stall",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Pudu. Hainanese chicken rice — check timings",
+      "tags": [
+        "must-eat",
+        "chicken-rice"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "wong-mei-kee",
+      "name": "Wong Mei Kee",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Hainanese chicken rice",
+      "tags": [
+        "must-eat",
+        "chicken-rice"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "kanna-curry-house",
+      "name": "Kanna Curry House",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Banana leaf rice",
+      "tags": [
+        "must-eat",
+        "banana-leaf"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "acha-curry-house",
+      "name": "Acha Curry House",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Banana leaf rice",
+      "tags": [
+        "must-eat",
+        "banana-leaf"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "maya",
+      "name": "Maya",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Banana leaf rice",
+      "tags": [
+        "must-eat",
+        "banana-leaf"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "durian-man",
+      "name": "Durian Man",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "SS2",
+      "tags": [
+        "must-eat",
+        "durian"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "kin-kin",
+      "name": "Kin Kin",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Chili pan mee",
+      "tags": [
+        "must-eat",
+        "chili-pan-mee"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "super-kitchen",
+      "name": "Super Kitchen",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Chili pan mee",
+      "tags": [
+        "must-eat",
+        "chili-pan-mee"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "hoi-peng",
+      "name": "Hoi Peng",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Malaysian Chinese seafood",
+      "tags": [
+        "must-eat",
+        "seafood"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "lala-cheong",
+      "name": "Lala Cheong",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Malaysian Chinese seafood",
+      "tags": [
+        "must-eat",
+        "seafood"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "fatty-crab",
+      "name": "Fatty Crab",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Malaysian Chinese seafood",
+      "tags": [
+        "must-eat",
+        "seafood"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "soong-kee-beef-noodle",
+      "name": "Soong Kee Beef Noodle",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [
+        "must-eat",
+        "beef-noodle"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "aunty-nat-s",
+      "name": "Aunty Nat's",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Nyonya food",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "meng-kee-grill-fish",
+      "name": "Meng Kee Grill Fish",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Jalan Alor",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "unique-seafood",
+      "name": "Unique Seafood",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Dim sum",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "madam-kwan-s",
+      "name": "Madam Kwan's",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Good all rounder",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "oriental-kopi",
+      "name": "Oriental Kopi",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "yum-me-place",
+      "name": "Yum Me Place",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "For kai see ho fun",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "mcdonald-s",
+      "name": "McDonald's",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Spicy Chicken McDeluxe",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "entier",
+      "name": "Entier",
+      "categories": [
+        "fancy"
+      ],
+      "area": null,
+      "notes": "@ Alila Hotel",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "barkar",
+      "name": "Barkar",
+      "categories": [
+        "fancy"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "chipta-11a",
+      "name": "Chipta 11A",
+      "categories": [
+        "fancy"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "atelier-binchotan",
+      "name": "Atelier Binchotan",
+      "categories": [
+        "fancy"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "hide",
+      "name": "Hide",
+      "categories": [
+        "fancy"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "dc-by-darren-chin",
+      "name": "DC by Darren Chin",
+      "categories": [
+        "fancy"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "bref-by-dc",
+      "name": "Bref by DC",
+      "categories": [
+        "fancy"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "potager",
+      "name": "Potager",
+      "categories": [
+        "fancy"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "categories": [
+        "fancy"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "shin-zushi",
+      "name": "Shin Zushi",
+      "categories": [
+        "japanese"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "uo-shin",
+      "name": "Uo Shin",
+      "categories": [
+        "japanese"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "kyomo",
+      "name": "Kyomo",
+      "categories": [
+        "japanese",
+        "latenight"
+      ],
+      "area": null,
+      "notes": "Closes 11pm",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "makoto-ramen",
+      "name": "Makoto Ramen",
+      "categories": [
+        "japanese"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "sushi-oribe",
+      "name": "Sushi Oribe",
+      "categories": [
+        "japanese"
+      ],
+      "area": null,
+      "notes": "Omakase",
+      "tags": [
+        "omakase"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "sushi-taka",
+      "name": "Sushi Taka",
+      "categories": [
+        "japanese"
+      ],
+      "area": null,
+      "notes": "Omakase",
+      "tags": [
+        "omakase"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "tenmasa",
+      "name": "Tenmasa",
+      "categories": [
+        "japanese",
+        "fancy"
+      ],
+      "area": null,
+      "notes": "Tempura omakase",
+      "tags": [
+        "omakase"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "la-moon",
+      "name": "La Moon",
+      "categories": [
+        "thai"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "food-lala",
+      "name": "Food Lala",
+      "categories": [
+        "thai"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "wet-deck",
+      "name": "Wet Deck",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "@ W Hotel",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "terrazza",
+      "name": "Terrazza",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "dissolved-solids",
+      "name": "Dissolved Solids",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "g-string",
+      "name": "G String",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "Chinatown bar hopping",
+      "tags": [
+        "chinatown-bar-hop"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "xo",
+      "name": "XO",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "Chinatown bar hopping",
+      "tags": [
+        "chinatown-bar-hop"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "concubine",
+      "name": "Concubine",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "Chinatown bar hopping",
+      "tags": [
+        "chinatown-bar-hop"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "ps150",
+      "name": "PS150",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "Chinatown bar hopping",
+      "tags": [
+        "chinatown-bar-hop"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "small-shifting-space",
+      "name": "Small Shifting Space",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "Chinatown bar hopping",
+      "tags": [
+        "chinatown-bar-hop"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "botakliquor",
+      "name": "Botakliquor",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "Chinatown bar hopping",
+      "tags": [
+        "chinatown-bar-hop"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "la-boca",
+      "name": "La Boca",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "bar-trigona",
+      "name": "Bar Trigona",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "pahit",
+      "name": "Pahit",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "joloko",
+      "name": "Joloko",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "junglebird",
+      "name": "Junglebird",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "coley",
+      "name": "Coley",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "suzie-wong",
+      "name": "Suzie Wong",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "vertigo",
+      "name": "Vertigo",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "@ Banyan Tree",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "helipad",
+      "name": "Helipad",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "here-and-now",
+      "name": "Here & Now",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "ryu-by-lye",
+      "name": "Ryu by Lye",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "jiao-tim",
+      "name": "Jiao Tim",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "up-and-away",
+      "name": "Up & Away",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "kiku-kissa",
+      "name": "Kiku Kissa",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "else-hotel-kl",
+      "name": "Else Hotel KL",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "the-five",
+      "name": "The Five",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "YKO and Izakaya bars",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "runcit-bar",
+      "name": "Runcit Bar",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "TTDI",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "fifty-tales",
+      "name": "Fifty Tales",
+      "categories": [
+        "bars"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "basic-wine-store",
+      "name": "Basic Wine Store",
+      "categories": [
+        "wine"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "unwined",
+      "name": "Unwined",
+      "categories": [
+        "wine"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "mount-pleasure",
+      "name": "Mount Pleasure",
+      "categories": [
+        "wine"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "coffee-stain",
+      "name": "Coffee Stain",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "103-coffee",
+      "name": "103 Coffee",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "kopenhagen-coffee",
+      "name": "Kopenhagen Coffee",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "the-roast-things-coffee-roaster",
+      "name": "The Roast Things Coffee Roaster",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "curio-coffee-roasters",
+      "name": "Curio Coffee Roasters",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "rara-coffee",
+      "name": "Rara Coffee",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "peep",
+      "name": "Peep",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "coffeeboy-club",
+      "name": "Coffeeboy Club",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "feeka-coffee-roasters",
+      "name": "Feeka Coffee Roasters",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "monet-in-the-city",
+      "name": "Monet in the City",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "croisserie",
+      "name": "Croisserie",
+      "categories": [
+        "coffee",
+        "dessert"
+      ],
+      "area": null,
+      "notes": "Amazing pastries",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "dak-han-specialty-coffee",
+      "name": "Dak Han Specialty Coffee",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "curate-coffee-roasters",
+      "name": "Curate Coffee Roasters",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "hani-coffee-and-roastery",
+      "name": "Hani Coffee & Roastery",
+      "categories": [
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "ono-specialty-coffee-and-matcha",
+      "name": "ONO Specialty Coffee & Matcha",
+      "categories": [
+        "matcha",
+        "coffee"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "niko-neko",
+      "name": "Niko Neko",
+      "categories": [
+        "matcha"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "hejau",
+      "name": "Hejau",
+      "categories": [
+        "matcha"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "all-about-chew",
+      "name": "All About Chew",
+      "categories": [
+        "dessert"
+      ],
+      "area": null,
+      "notes": "Cookies",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "klcg",
+      "name": "KLCG",
+      "categories": [
+        "dessert"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "kenny-hills-bakers",
+      "name": "Kenny Hills Bakers",
+      "categories": [
+        "dessert"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "kedai-roti-universal",
+      "name": "Kedai Roti Universal",
+      "categories": [
+        "dessert"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "hometown-hainan-coffee",
+      "name": "Hometown Hainan Coffee",
+      "categories": [
+        "latenight",
+        "local"
+      ],
+      "area": null,
+      "notes": "Closes 11pm",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "nirwana-maju",
+      "name": "Nirwana Maju",
+      "categories": [
+        "latenight",
+        "local"
+      ],
+      "area": null,
+      "notes": "Closes 11pm",
+      "tags": [],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
         "lastChecked": null
       }
     }
   ],
-  "archive": []
+  "archive": [
+    {
+      "id": "berjaya-laksa",
+      "name": "Berjaya",
+      "categories": [
+        "local"
+      ],
+      "area": null,
+      "notes": "Laksa. Marked RIP on the original list.",
+      "tags": [
+        "must-eat",
+        "laksa"
+      ],
+      "added": "2026-08-04",
+      "updated": "2026-08-04",
+      "archivedOn": "2026-08-04",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    }
+  ]
 }

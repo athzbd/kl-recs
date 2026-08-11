@@ -278,8 +278,28 @@ select {
   .badge-closed { color: #161513; }
 }
 
-.badge-open  { color: #1a7f37; font-weight: 600; }
-.badge-shut  { color: var(--muted); }
+.badge-must {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: .75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.tags {
+  margin: 2px 0 0;
+  font-size: .8125rem;
+  color: var(--muted);
+}
+
+.tips {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: .875rem;
+  color: var(--muted);
+}
 
 .archive .card { opacity: .62; }
 
@@ -299,12 +319,24 @@ select {
   margin-top: 16px;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  z-index: 1;
+  overflow: hidden;
 }
 
-.leaflet-popup-content { margin: 10px 12px; font: inherit; }
-.leaflet-popup-content h3 { margin: 0 0 4px; font-size: 1rem; }
-.leaflet-popup-content p { margin: 0 0 6px; font-size: .875rem; }
+.map-fallback {
+  margin-top: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+
+/* Google's InfoWindow renders in its own light-themed bubble. */
+.iw { color: #1c1b19; }
+.iw h3 { margin: 0 0 4px; font-size: 1rem; }
+.iw p { margin: 0 0 6px; font-size: .875rem; }
+.iw a { color: #b4531f; font-weight: 500; }
 
 /* ---------- footer ---------- */
 
