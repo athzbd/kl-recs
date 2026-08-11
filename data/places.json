@@ -592,7 +592,7 @@
         "businessStatus": "OPERATIONAL",
         "address": "Lot 042A & 043A, Third Floor, Lingkaran Syed Putra, Mid Valley City, 58000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 11,
+        "outlets": 10,
         "outletAreas": [
           "Bangsar",
           "Bukit Bintang",
@@ -652,14 +652,9 @@
         "businessStatus": "OPERATIONAL",
         "address": "113, Jln Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 17,
+        "outlets": 1,
         "outletAreas": [
-          "Ampang",
-          "Bangsar",
-          "Cheras",
-          "Petaling Jaya",
-          "Shah Alam",
-          "Sri Hartamas"
+          "Ampang"
         ]
       }
     },
@@ -684,14 +679,11 @@
         "businessStatus": "OPERATIONAL",
         "address": "A3-G1-01, Ground Floor, Block A3, 1, Jln Dutamas 1, Solaris Dutamas, 50480 Kuala Lumpur, Federal Territory of Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 20,
+        "outlets": 7,
         "outletAreas": [
-          "Ampang",
-          "Damansara",
           "Petaling Jaya",
           "Publika",
-          "Shah Alam",
-          "Subang"
+          "Shah Alam"
         ]
       }
     },
@@ -969,16 +961,9 @@
         "businessStatus": "OPERATIONAL",
         "address": "21, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 20,
+        "outlets": 1,
         "outletAreas": [
-          "Ampang",
-          "Bangsar",
-          "Batu Caves",
-          "Brickfields",
-          "Cheras",
-          "Kampung Baru",
-          "Mont Kiara",
-          "Shah Alam"
+          "Bangsar"
         ]
       }
     },
@@ -1030,7 +1015,7 @@
         "businessStatus": "OPERATIONAL",
         "address": "KL537, Taman Segambut (Barat, Kawasan Perusahaan Segambut, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 5,
+        "outlets": 4,
         "outletAreas": [
           "Bukit Bintang",
           "Publika",
@@ -1059,7 +1044,7 @@
         "businessStatus": "OPERATIONAL",
         "address": "33, Jalan Dewan Sultan Sulaiman 1 Kuala Lumpur MY, Off, Jalan Tuanku Abdul Rahman, Chow Kit, 50300 Kuala Lumpur, WP Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 20,
+        "outlets": 17,
         "outletAreas": [
           "Bukit Jalil",
           "Cheras",
@@ -1148,9 +1133,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "2, Jalan SS 24/13, Taman Megah, 47301 Petaling Jaya, Selangor",
         "lastChecked": "2026-08-11",
-        "outlets": 2,
+        "outlets": 1,
         "outletAreas": [
-          "Ampang",
           "Petaling Jaya"
         ]
       }
@@ -1304,7 +1288,7 @@
         "businessStatus": "OPERATIONAL",
         "address": "Lot 414-415 & OS404, Level 4, Menara Berkembar Petronas, Kuala Lumpur City Centre, 50088 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 15,
+        "outlets": 14,
         "outletAreas": [
           "Bukit Bintang",
           "Bukit Jalil",
@@ -1361,10 +1345,9 @@
         "lastChecked": "2026-08-11",
         "outlets": 20,
         "outletAreas": [
+          "Ampang",
           "Bangsar",
           "Bukit Bintang",
-          "Bukit Jalil",
-          "Damansara",
           "KLCC",
           "Petaling Jaya",
           "Sentul",
@@ -1391,7 +1374,7 @@
         "businessStatus": "OPERATIONAL",
         "address": "Level 41, Alila Bangsar, 58, Jalan Ang Seng, Brickfields, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 2,
+        "outlets": 1,
         "outletAreas": [
           "Bangsar"
         ]
@@ -1487,7 +1470,7 @@
         "businessStatus": "OPERATIONAL",
         "address": "Concourse, Ritz-Carlton Residences, 105, Jln Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 2,
+        "outlets": 1,
         "outletAreas": [
           "Ampang"
         ]
@@ -1559,7 +1542,7 @@
         "businessStatus": "OPERATIONAL",
         "address": "P-11, Taman Bukit Bambu, Off, Lebuhraya Duta - Ulu Kelang, Taman Bamboo, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 2,
+        "outlets": 1,
         "outletAreas": [
           "Bamboo Hills"
         ]
@@ -1868,7 +1851,6 @@
         "lastChecked": "2026-08-11",
         "outlets": 1,
         "outletAreas": [
-          "KLCC",
           "Sentul"
         ]
       }
@@ -1943,16 +1925,10 @@
         "businessStatus": "OPERATIONAL",
         "address": "5, Jalan Balai Polis, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 13,
+        "outlets": 1,
         "outletAreas": [
-          "Bangsar",
           "Bukit Bintang",
-          "Cheras",
-          "Chinatown",
-          "KLCC",
-          "Kepong",
-          "Petaling Jaya",
-          "Subang"
+          "KLCC"
         ]
       }
     },
@@ -2199,11 +2175,10 @@
         "businessStatus": "OPERATIONAL",
         "address": "Level 59, Banyan Tree Kuala Lumpur, 2, Jalan Conlay, Vertigo, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 4,
+        "outlets": 2,
         "outletAreas": [
           "KLCC",
-          "Rawang",
-          "Shah Alam"
+          "Rawang"
         ]
       }
     },
@@ -2225,7 +2200,7 @@
         "businessStatus": "OPERATIONAL",
         "address": "34 Menara KH, Jln Sultan Ismail, Bukit Bintang, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 6,
+        "outlets": 4,
         "outletAreas": [
           "Bukit Bintang",
           "KLCC"
@@ -2373,11 +2348,8 @@
         "businessStatus": "OPERATIONAL",
         "address": "29A, Jalan Wan Kadir 2, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 17,
+        "outlets": 1,
         "outletAreas": [
-          "Batu Caves",
-          "Bukit Bintang",
-          "Shah Alam",
           "TTDI"
         ]
       }
@@ -2607,10 +2579,9 @@
         "businessStatus": "OPERATIONAL",
         "address": "Rivercity Roof Top, Lot 468, G26-A Block G, Rivercity, Jln Sultan Azlan Shah, Jalan Ipoh, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 16,
+        "outlets": 13,
         "outletAreas": [
           "Ampang",
-          "Bukit Bintang",
           "Cheras",
           "Chinatown",
           "Sentul",
@@ -2967,11 +2938,9 @@
         "businessStatus": "OPERATIONAL",
         "address": "204A, Jln Ampang, Kampung Datuk Keramat, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 5,
+        "outlets": 1,
         "outletAreas": [
-          "Ampang",
-          "KLCC",
-          "Petaling Jaya"
+          "Ampang"
         ]
       }
     },
@@ -2993,11 +2962,10 @@
         "businessStatus": "OPERATIONAL",
         "address": "Lot B-2, Taman Tunku, Off, Jln Langgak Tunku, Bukit Tunku, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 14,
+        "outlets": 10,
         "outletAreas": [
           "Ampang",
           "Bangsar",
-          "Damansara Heights",
           "KLCC",
           "Petaling Jaya",
           "Shah Alam",
@@ -3081,10 +3049,9 @@
         "businessStatus": "OPERATIONAL",
         "address": "43, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 2,
+        "outlets": 1,
         "outletAreas": [
-          "Bangsar",
-          "Subang"
+          "Bangsar"
         ]
       }
     }
