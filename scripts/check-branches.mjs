@@ -95,6 +95,18 @@ async function search(query) {
   return places ?? [];
 }
 
+/* --query="..." runs one arbitrary search and exits. Purely a debugging aid
+   for working out what Google will and will not return for a brand. */
+const RAW_QUERY = process.argv.find((a) => a.startsWith('--query='))?.slice(8);
+if (RAW_QUERY) {
+  const results = await search(RAW_QUERY);
+  console.log(`\n"${RAW_QUERY}" -> ${results.length} results`);
+  results.forEach((r) => console.log(
+    `   ${r.displayName?.text} · ${r.formattedAddress?.slice(0, 70)}`
+  ));
+  process.exit(0);
+}
+
 const data = JSON.parse(await readFile(DATA_PATH, 'utf8'));
 const report = [];
 const problems = [];

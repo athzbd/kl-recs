@@ -19,6 +19,10 @@ on:
         description: 'Print every search result and whether it matched'
         type: boolean
         default: false
+      query:
+        description: 'Run one raw search and exit (debugging, one API call)'
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -40,6 +44,7 @@ jobs:
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           [ -n "${{ inputs.only }}" ] && ARGS="$ARGS --only=${{ inputs.only }}"
           [ "${{ inputs.verbose }}" = "true" ] && ARGS="$ARGS --verbose"
+          [ -n "${{ inputs.query }}" ] && ARGS="$ARGS --query=${{ inputs.query }}"
           node scripts/check-branches.mjs $ARGS
 
       - name: Commit the branch data
