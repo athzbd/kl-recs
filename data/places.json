@@ -86,13 +86,17 @@
     "Damansara",
     "Damansara Heights",
     "KLCC",
+    "Kajang",
     "Kampung Baru",
     "Kepong",
+    "Klang",
+    "Kota Damansara",
     "Lake Gardens",
     "Mid Valley",
     "Mont Kiara",
     "Petaling Jaya",
     "Publika",
+    "Puchong",
     "Pudu",
     "Rawang",
     "Sentul",
@@ -1566,13 +1570,12 @@
         "businessStatus": "OPERATIONAL",
         "address": "368B, Micasa All Suite Hotel, Micasa All Suite Hotel, Jln Tun Razak, Taman U Thant, 50400 Kuala Lumpur, Federal Territory of Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 4,
+        "outlets": 1,
         "outletAreas": [
-          "KLCC",
-          "Shah Alam",
-          "Subang"
+          "KLCC"
         ]
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "shin-zushi",
@@ -1580,7 +1583,7 @@
       "categories": [
         "japanese"
       ],
-      "area": "Bukit Jalil",
+      "area": "Kajang",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -1592,13 +1595,31 @@
         "businessStatus": "OPERATIONAL",
         "address": "Ground Floor, No.11, Jalan Jalil Jaya 7 Jalil Link, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 10,
+        "outlets": 9,
         "outletAreas": [
           "Bukit Jalil",
           "Cheras",
+          "Kajang",
           "Kepong",
+          "Klang",
+          "Kota Damansara",
           "Petaling Jaya",
+          "Puchong",
           "Subang"
+        ]
+      },
+      "branchesOverride": {
+        "outlets": 9,
+        "areas": [
+          "Kajang",
+          "Klang",
+          "Cheras",
+          "Kota Damansara",
+          "Kepong",
+          "Subang",
+          "Petaling Jaya",
+          "Bukit Jalil",
+          "Puchong"
         ]
       }
     },
@@ -2175,12 +2196,12 @@
         "businessStatus": "OPERATIONAL",
         "address": "Level 59, Banyan Tree Kuala Lumpur, 2, Jalan Conlay, Vertigo, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 2,
+        "outlets": 1,
         "outletAreas": [
-          "KLCC",
-          "Rawang"
+          "KLCC"
         ]
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "helipad",
@@ -2200,12 +2221,12 @@
         "businessStatus": "OPERATIONAL",
         "address": "34 Menara KH, Jln Sultan Ismail, Bukit Bintang, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 4,
+        "outlets": 1,
         "outletAreas": [
-          "Bukit Bintang",
-          "KLCC"
+          "Bukit Bintang"
         ]
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "ryu-by-lye",
@@ -2421,11 +2442,12 @@
         "businessStatus": "OPERATIONAL",
         "address": "B-01, 29, Jalan Riong, APW Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 2,
+        "outlets": 1,
         "outletAreas": [
           "Bangsar"
         ]
-      }
+      },
+      "singleLocation": true
     },
     {
       "id": "mount-pleasure",
@@ -2579,14 +2601,17 @@
         "businessStatus": "OPERATIONAL",
         "address": "Rivercity Roof Top, Lot 468, G26-A Block G, Rivercity, Jln Sultan Azlan Shah, Jalan Ipoh, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 13,
+        "outlets": 2,
         "outletAreas": [
           "Ampang",
-          "Cheras",
-          "Chinatown",
+          "Sentul"
+        ]
+      },
+      "branchesOverride": {
+        "outlets": 2,
+        "areas": [
           "Sentul",
-          "Setapak",
-          "Subang"
+          "Ampang"
         ]
       }
     },
@@ -3053,6 +3078,24 @@
         "outletAreas": [
           "Bangsar"
         ]
+      }
+    },
+    {
+      "id": "anjum",
+      "name": "Anjum",
+      "categories": [],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "added": "2026-08-11",
+      "updated": "2026-08-11",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
       }
     }
   ],

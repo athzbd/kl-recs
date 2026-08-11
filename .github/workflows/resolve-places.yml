@@ -37,6 +37,8 @@ jobs:
 
       - name: Commit the resolved data
         if: inputs.dry_run == false
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name  "kl-recs-bot"
           git config user.email "actions@github.com"
@@ -46,4 +48,7 @@ jobs:
             git add data/places.json
             git commit -m "chore: resolve place IDs, coordinates and areas"
             git push
+            # A push made with GITHUB_TOKEN does not trigger other workflows,
+            # so the deploy has to be asked for or the site serves stale data.
+            gh workflow run deploy.yml
           fi
