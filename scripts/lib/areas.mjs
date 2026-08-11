@@ -25,6 +25,7 @@ export const AREA_PATTERNS = [
   [st('cenderasari'), 'Lake Gardens'],
   [st('tuanku abdul halim'), 'Lake Gardens'],
   [/taman desa/i, 'Taman Desa'],
+  [/bamboo hills|taman bukit bambu|taman bamboo/i, 'Bamboo Hills'],
   [/bukit bintang|changkat|\bimbi\b|bukit ceylon/i, 'Bukit Bintang'],
   [st('alor'), 'Bukit Bintang'],
   [st('raja chulan'), 'Bukit Bintang'],

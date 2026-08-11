@@ -75,6 +75,7 @@
   ],
   "areas": [
     "Ampang",
+    "Bamboo Hills",
     "Bangsar",
     "Batu Caves",
     "Brickfields",
@@ -1517,7 +1518,7 @@
       "categories": [
         "fancy"
       ],
-      "area": null,
+      "area": "Bamboo Hills",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -1530,7 +1531,9 @@
         "address": "P-11, Taman Bukit Bambu, Off, Lebuhraya Duta - Ulu Kelang, Taman Bamboo, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
         "outlets": 1,
-        "outletAreas": []
+        "outletAreas": [
+          "Bamboo Hills"
+        ]
       }
     },
     {
