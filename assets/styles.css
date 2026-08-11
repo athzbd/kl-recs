@@ -1,27 +1,27 @@
 :root {
-  --bg: #fbfaf8;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --text: #1c1b19;
-  --muted: #6b6862;
-  --line: #e5e1da;
-  --accent: #b4531f;
-  --accent-soft: #fdf0e7;
-  --closed: #b3261e;
+  --text: #17181a;
+  --muted: #71757c;
+  --line: #e6e7e9;
+  --accent: #17181a;
+  --accent-soft: #f2f3f5;
+  --closed: #8a8d93;
   --radius: 14px;
-  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 14px rgba(0,0,0,.045);
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 3px 10px rgba(0,0,0,.035);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #161513;
-    --surface: #201f1c;
-    --text: #efece6;
-    --muted: #a8a49b;
-    --line: #33312c;
-    --accent: #f0a173;
-    --accent-soft: #33251c;
-    --closed: #f2b8b5;
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.25);
+    --bg: #141517;
+    --surface: #1c1d20;
+    --text: #ececee;
+    --muted: #9a9ea6;
+    --line: #2c2e32;
+    --accent: #ececee;
+    --accent-soft: #26282c;
+    --closed: #8a8d93;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 3px 10px rgba(0,0,0,.25);
   }
 }
 
@@ -119,11 +119,7 @@ button:focus-visible {
 
 .view-toggle button.active {
   background: var(--accent);
-  color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  .view-toggle button.active { color: #161513; }
+  color: var(--bg);
 }
 
 .chips {
@@ -208,24 +204,10 @@ select {
   gap: 6px;
 }
 
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 10px;
-}
-
 .card h3 {
   margin: 0;
   font-size: 1.0625rem;
   letter-spacing: -0.01em;
-}
-
-.stars {
-  color: var(--accent);
-  font-size: .8125rem;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .card-meta {
@@ -257,25 +239,25 @@ select {
   font-size: .875rem;
 }
 
+/* Links are near-black in this palette, so they need the underline to
+   read as links at all. */
 .card-actions a {
   color: var(--accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--line);
   font-weight: 500;
 }
 
-.card-actions a:hover { text-decoration: underline; }
+.card-actions a:hover { text-decoration-color: var(--accent); }
 
 .badge-closed {
   background: var(--closed);
-  color: #fff;
+  color: var(--bg);
   font-size: .75rem;
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 999px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .badge-closed { color: #161513; }
 }
 
 .badge-must {
@@ -301,10 +283,41 @@ select {
   color: var(--muted);
 }
 
-.archive .card { opacity: .62; }
+.archive .card { opacity: .7; }
 
-.archive-heading { font-size: 1.125rem; margin: 32px 0 2px; }
-.archive-note { margin: 0; color: var(--muted); font-size: .875rem; }
+.archive-details {
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.archive-details summary {
+  cursor: pointer;
+  font-size: .8125rem;
+  color: var(--muted);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.archive-details summary::-webkit-details-marker { display: none; }
+
+.archive-details summary::before {
+  content: '▸';
+  font-size: .75rem;
+  transition: transform .15s ease;
+}
+
+.archive-details[open] summary::before { transform: rotate(90deg); }
+
+.archive-details summary:hover { color: var(--text); }
+
+.archive-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: .8125rem;
+}
 
 .empty {
   text-align: center;
@@ -332,11 +345,12 @@ select {
   border-radius: var(--radius);
 }
 
-/* Google's InfoWindow renders in its own light-themed bubble. */
-.iw { color: #1c1b19; }
+/* Google's InfoWindow renders in its own light-themed bubble, so these
+   stay literal rather than following the theme variables. */
+.iw { color: #17181a; }
 .iw h3 { margin: 0 0 4px; font-size: 1rem; }
 .iw p { margin: 0 0 6px; font-size: .875rem; }
-.iw a { color: #b4531f; font-weight: 500; }
+.iw a { color: #17181a; font-weight: 600; }
 
 /* ---------- footer ---------- */
 

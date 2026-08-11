@@ -100,7 +100,7 @@ function cardHtml(place, { archived = false } = {}) {
 
   return `
     <li class="card">
-      <div class="card-top"><h3>${escapeHtml(place.name)}</h3></div>
+      <h3>${escapeHtml(place.name)}</h3>
       <div class="card-meta">${meta}</div>
       ${place.notes ? `<p class="notes">${escapeHtml(place.notes)}</p>` : ''}
       ${dishTags.length
@@ -316,6 +316,7 @@ function renderArchive() {
   const archive = state.data.archive || [];
   if (!archive.length) return;
   $('archive-section').hidden = false;
+  $('archive-summary').textContent = `Closed / archived (${archive.length})`;
   $('archive-cards').innerHTML = archive.map((p) => cardHtml(p, { archived: true })).join('');
 }
 
