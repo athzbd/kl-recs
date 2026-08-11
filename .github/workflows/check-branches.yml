@@ -11,6 +11,14 @@ on:
         description: 'Report only, do not commit'
         type: boolean
         default: false
+      only:
+        description: 'Limit to one place id (cheap debugging — one API call)'
+        type: string
+        default: ''
+      verbose:
+        description: 'Print every search result and whether it matched'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -28,11 +36,11 @@ jobs:
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: |
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
-            node scripts/check-branches.mjs --dry-run
-          else
-            node scripts/check-branches.mjs
-          fi
+          ARGS=""
+          [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          [ -n "${{ inputs.only }}" ] && ARGS="$ARGS --only=${{ inputs.only }}"
+          [ "${{ inputs.verbose }}" = "true" ] && ARGS="$ARGS --verbose"
+          node scripts/check-branches.mjs $ARGS
 
       - name: Commit the branch data
         if: inputs.dry_run == false

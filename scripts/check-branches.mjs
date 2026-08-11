@@ -23,6 +23,9 @@ import { areaFromAddress } from './lib/areas.mjs';
 const DATA_PATH = new URL('../data/places.json', import.meta.url);
 const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 const DRY_RUN = process.argv.includes('--dry-run');
+// --only=some-id limits the run to one entry, for cheap iteration.
+const ONLY = process.argv.find((a) => a.startsWith('--only='))?.split('=')[1];
+const VERBOSE = process.argv.includes('--verbose');
 
 if (!API_KEY) {
   console.error('Missing GOOGLE_MAPS_API_KEY.');
@@ -31,13 +34,44 @@ if (!API_KEY) {
 
 const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 
+/* Words that describe what a place is rather than who it is. Stripping them
+   leaves the bit that actually identifies the brand, so "Feeka Coffee
+   Roasters" and "Feeka @ The Five" are recognised as the same thing. */
+const GENERIC = new RegExp(
+  '\\b(coffee|roasters?|roastery|cafe|caf\u00e9|restaurant|restoran|bar|bistro|'
+  + 'kitchen|eatery|kl|kuala|lumpur|malaysia|sdn|bhd|the|by|at|specialty)\\b',
+  'gi'
+);
+
+/** The identifying part of a name: "Feeka Coffee Roasters" -> "feeka". */
+function brandCore(name) {
+  const stripped = norm((name || '').replace(GENERIC, ' '));
+  return stripped || norm(name);
+}
+
 /** Does this result look like the same brand, rather than a coincidence? */
 function sameBrand(entryName, resultName) {
   const a = norm(entryName);
   const b = norm(resultName);
   if (!a || !b) return false;
-  return b.startsWith(a) || a.startsWith(b) || b.includes(a);
+  if (b.startsWith(a) || a.startsWith(b) || b.includes(a)) return true;
+
+  /* Fall back to the identifying core. Guarded on length because short cores
+     ("xo", "hide", "peep") collide with unrelated businesses far too easily. */
+  const core = brandCore(entryName);
+  if (core.length < 5) return false;
+  return norm(resultName).includes(core) || brandCore(resultName).includes(core);
 }
+
+/* Greater Klang Valley. Restricting to it stops Text Search spending its 20
+   result slots on same-named places in other states, which is how Feeka's
+   Damansara Heights outlet went missing. */
+const KLANG_VALLEY = {
+  rectangle: {
+    low: { latitude: 2.85, longitude: 101.35 },
+    high: { latitude: 3.40, longitude: 101.90 },
+  },
+};
 
 async function search(query) {
   const res = await fetch('https://places.googleapis.com/v1/places:searchText', {
@@ -48,7 +82,12 @@ async function search(query) {
       'X-Goog-FieldMask':
         'places.id,places.displayName,places.formattedAddress,places.businessStatus',
     },
-    body: JSON.stringify({ textQuery: query, regionCode: 'MY', maxResultCount: 20 }),
+    body: JSON.stringify({
+      textQuery: query,
+      regionCode: 'MY',
+      maxResultCount: 20,
+      locationRestriction: KLANG_VALLEY,
+    }),
   });
 
   if (!res.ok) throw new Error(`${res.status} ${await res.text()}`);
@@ -61,6 +100,8 @@ const report = [];
 const problems = [];
 
 for (const place of data.places) {
+  if (ONLY && place.id !== ONLY) continue;
+
   /* An explicit override wins over Google. Text Search under-reports some
      brands — it found one Coffee Stain when there are three — and Athena
      knows the ground truth. No API call needed. */
@@ -82,11 +123,19 @@ for (const place of data.places) {
   }
 
   try {
-    const results = await search(`${place.name} Kuala Lumpur Malaysia`);
+    const results = await search(place.name);
     const brand = results.filter(
       (r) => sameBrand(place.name, r.displayName?.text)
         && r.businessStatus !== 'CLOSED_PERMANENTLY'
     );
+
+    if (VERBOSE) {
+      console.log(`\n${place.name} — ${results.length} results, ${brand.length} same-brand`);
+      results.forEach((r) => console.log(
+        `   ${sameBrand(place.name, r.displayName?.text) ? '✓' : ' '} `
+        + `${r.displayName?.text} · ${r.formattedAddress?.slice(0, 60)}`
+      ));
+    }
 
     // De-duplicate by place ID — Google occasionally returns the same outlet twice.
     const byId = new Map(brand.map((r) => [r.id, r]));
