@@ -81,9 +81,11 @@ const unmatched = [];
 for (const place of data.places) {
   if (place.google?.placeId) continue;
 
-  // The note often carries the location hint ("SS2", "Jalan Alor", "@ W Hotel").
+  // `searchQuery` is an explicit override for entries Text Search gets wrong.
+  // Otherwise the note usually carries the hint ("SS2", "Jalan Alor", "@ W Hotel").
   const hint = place.notes?.replace(/^@\s*/, '') || '';
-  const query = `${place.name} ${hint} Kuala Lumpur Malaysia`.replace(/\s+/g, ' ');
+  const query = place.searchQuery
+    || `${place.name} ${hint} Kuala Lumpur Malaysia`.replace(/\s+/g, ' ');
 
   try {
     const match = await search(query);

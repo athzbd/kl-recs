@@ -218,19 +218,20 @@
         "sights",
         "bars"
       ],
-      "area": "Bukit Bintang",
+      "area": null,
       "notes": "Main strip of bars",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": "ChIJXyrddio2zDERP8WPwaXwvZ8",
-        "lat": 3.1479982,
-        "lng": 101.7071577,
-        "businessStatus": "OPERATIONAL",
-        "address": "16, Changkat Bukit Bintang, Bukit Bintang, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
         "lastChecked": "2026-08-11"
-      }
+      },
+      "searchQuery": "Jalan Changkat Bukit Bintang Kuala Lumpur"
     },
     {
       "id": "jalan-alor",
@@ -1334,19 +1335,20 @@
       "categories": [
         "japanese"
       ],
-      "area": "Sri Hartamas",
+      "area": null,
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": "ChIJzdPFIfBIzDERElev947Ma7o",
-        "lat": 3.1632255,
-        "lng": 101.6501911,
-        "businessStatus": "OPERATIONAL",
-        "address": "54, Jalan 27/70a, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
         "lastChecked": "2026-08-11"
-      }
+      },
+      "searchQuery": "Makoto Ramen Kuala Lumpur"
     },
     {
       "id": "sushi-oribe",
@@ -1441,19 +1443,20 @@
       "categories": [
         "thai"
       ],
-      "area": "Chinatown",
+      "area": null,
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": "ChIJPVGtDrxJzDERatQnLHBYARk",
-        "lat": 3.1446077,
-        "lng": 101.69874329999999,
-        "businessStatus": "OPERATIONAL",
-        "address": "99, Jalan Sultan, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
         "lastChecked": "2026-08-11"
-      }
+      },
+      "searchQuery": "Food Lala Thai restaurant Kuala Lumpur"
     },
     {
       "id": "wet-deck",
@@ -1609,7 +1612,7 @@
       "categories": [
         "bars"
       ],
-      "area": "KLCC",
+      "area": null,
       "notes": "Chinatown bar hopping",
       "tags": [
         "chinatown-bar-hop"
@@ -1617,13 +1620,14 @@
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": "ChIJFwubC_dJzDER3H7P5pwRhbA",
-        "lat": 3.141367,
-        "lng": 101.69748609999999,
-        "businessStatus": "OPERATIONAL",
-        "address": "5, Jalan Balai Polis, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
         "lastChecked": "2026-08-11"
-      }
+      },
+      "searchQuery": "Small Shifting Space bar Jalan Sultan Chinatown Kuala Lumpur"
     },
     {
       "id": "botakliquor",
@@ -1953,19 +1957,20 @@
       "categories": [
         "bars"
       ],
-      "area": "Damansara Heights",
+      "area": null,
       "notes": "YKO and Izakaya bars",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": "ChIJPVaVHk1JzDERv_tpTDaX57U",
-        "lat": 3.1512159,
-        "lng": 101.66470819999999,
-        "businessStatus": "OPERATIONAL",
-        "address": "E-3-02, Level 3 , Block E, The Five @ KPD, Kompleks Pejabat Damansara, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
         "lastChecked": "2026-08-11"
-      }
+      },
+      "searchQuery": "The Five KPD Kompleks Pejabat Damansara Bukit Damansara"
     },
     {
       "id": "runcit-bar",
