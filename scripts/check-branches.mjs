@@ -96,6 +96,15 @@ for (const place of data.places) {
       outlets.map((r) => areaFromAddress(r.formattedAddress)).filter(Boolean)
     )].sort();
 
+    /* Fall back to this entry's own stored address. When Google's name for a
+       place differs from Athena's — "Terrasse KL" for Terrazza — sameBrand
+       rejects every result and areas comes back empty, which used to leave
+       the entry with no area at all. */
+    if (!areas.length) {
+      const own = areaFromAddress(place.google?.address);
+      if (own) areas.push(own);
+    }
+
     // Never lose the pinned area just because Text Search moved on.
     if (place.area && !areas.includes(place.area)) areas.push(place.area);
 
