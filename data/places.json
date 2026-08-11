@@ -90,10 +90,11 @@
     "Mid Valley",
     "Mont Kiara",
     "Petaling Jaya",
+    "Publika",
     "Pudu",
+    "Rawang",
     "Sentul",
     "Setapak",
-    "Shah Alam",
     "Sri Hartamas",
     "TTDI"
   ],
@@ -329,7 +330,7 @@
       "categories": [
         "shopping"
       ],
-      "area": null,
+      "area": "KLCC",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -342,7 +343,9 @@
         "address": "Persiaran TRX, Tun Razak Exchange, 55188 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
         "outlets": 1,
-        "outletAreas": []
+        "outletAreas": [
+          "KLCC"
+        ]
       },
       "singleLocation": true
     },
@@ -377,7 +380,7 @@
       "categories": [
         "shopping"
       ],
-      "area": null,
+      "area": "Mid Valley",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -390,7 +393,9 @@
         "address": "Lingkaran Syed Putra, Mid Valley City, 59200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
         "outlets": 1,
-        "outletAreas": []
+        "outletAreas": [
+          "Mid Valley"
+        ]
       },
       "singleLocation": true
     },
@@ -450,7 +455,7 @@
       "categories": [
         "shopping"
       ],
-      "area": null,
+      "area": "Publika",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
@@ -463,7 +468,9 @@
         "address": "Publika, 1, Jln Solaris Dutamas, Solaris Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
         "outlets": 1,
-        "outletAreas": []
+        "outletAreas": [
+          "Publika"
+        ]
       },
       "singleLocation": true
     },
@@ -1315,10 +1322,10 @@
           "Brickfields",
           "Bukit Bintang",
           "Bukit Jalil",
+          "Cheras",
           "KLCC",
           "Mid Valley",
           "Mont Kiara",
-          "Sentul",
           "Setapak"
         ]
       }
@@ -2411,9 +2418,11 @@
         "businessStatus": "OPERATIONAL",
         "address": "D4-G3-01, Jln Dutamas 1, Solaris Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 1,
+        "outlets": 3,
         "outletAreas": [
-          "Mont Kiara"
+          "Bangsar",
+          "Publika",
+          "Rawang"
         ]
       },
       "branchesOverride": {
@@ -2934,7 +2943,7 @@
         "businessStatus": "OPERATIONAL",
         "address": "Unit G-01, Sunway Tower, 86, Jln Ampang, Kuala Lumpur, 50300 Kuala Lumpur, Federal Territory of Kuala Lumpur",
         "lastChecked": "2026-08-11",
-        "outlets": 16,
+        "outlets": 15,
         "outletAreas": [
           "Ampang",
           "Bukit Bintang",
@@ -2942,8 +2951,7 @@
           "Damansara Heights",
           "Kepong",
           "Mont Kiara",
-          "Petaling Jaya",
-          "Shah Alam"
+          "Petaling Jaya"
         ]
       }
     },
