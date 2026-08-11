@@ -1998,19 +1998,20 @@
       "categories": [
         "bars"
       ],
-      "area": "Chinatown",
+      "area": null,
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": "ChIJ-YG-mjFJzDERsJJt9MbH0I4",
-        "lat": 3.1449927000000004,
-        "lng": 101.6984466,
-        "businessStatus": "CLOSED_PERMANENTLY",
-        "address": "80, Jalan Sultan, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-11"
-      }
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      },
+      "searchQuery": "Fifty Tales Petaling Jaya Selangor Malaysia"
     },
     {
       "id": "basic-wine-store",

@@ -211,6 +211,30 @@ async function drawMarkers(places) {
   }
 }
 
+/* ---------------- theme ---------------- */
+
+const THEME_KEY = 'klrecs-theme';
+
+/** What the page is actually showing right now. */
+function currentTheme() {
+  return document.documentElement.dataset.theme
+    || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+}
+
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  try { localStorage.setItem(THEME_KEY, theme); } catch {}
+  // Show where the click will take you, not where you are.
+  $('theme-toggle').textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+
+function wireTheme() {
+  setTheme(currentTheme());
+  $('theme-toggle').addEventListener('click', () => {
+    setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+  });
+}
+
 /* ---------------- setup ---------------- */
 
 function buildControls() {
@@ -332,6 +356,10 @@ async function init() {
   const dates = state.data.places.map((p) => p.updated).filter(Boolean).sort();
   if (dates.length) $('last-updated').textContent = `Last updated ${dates[dates.length - 1]}`;
 }
+
+// Wired independently of the data fetch, so the toggle still works if the
+// list fails to load.
+wireTheme();
 
 init().catch((err) => {
   console.error(err);

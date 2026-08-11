@@ -11,8 +11,11 @@
   --shadow: 0 1px 2px rgba(0,0,0,.04), 0 3px 10px rgba(0,0,0,.035);
 }
 
+/* Dark values live in two places on purpose: once for "follow the system"
+   (unless the user has explicitly chosen light) and once for an explicit
+   dark choice. Duplication beats depending on light-dark() support here. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #141517;
     --surface: #1c1d20;
     --text: #ececee;
@@ -23,6 +26,18 @@
     --closed: #8a8d93;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 3px 10px rgba(0,0,0,.25);
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #141517;
+  --surface: #1c1d20;
+  --text: #ececee;
+  --muted: #9a9ea6;
+  --line: #2c2e32;
+  --accent: #ececee;
+  --accent-soft: #26282c;
+  --closed: #8a8d93;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 3px 10px rgba(0,0,0,.25);
 }
 
 * { box-sizing: border-box; }
@@ -47,11 +62,34 @@ body {
   padding: 28px 0 16px;
 }
 
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .site-header h1 {
   margin: 0;
   font-size: 1.75rem;
   letter-spacing: -0.02em;
 }
+
+.theme-toggle {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover { background: var(--accent-soft); }
 
 .subtitle {
   margin: 4px 0 0;

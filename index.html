@@ -8,11 +8,22 @@
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>📍</text></svg>">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>
+    // Applied before first paint so a dark-mode visitor never sees a white flash.
+    try {
+      var t = localStorage.getItem('klrecs-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
-      <h1 id="site-title">KL Recs</h1>
+      <div class="header-row">
+        <h1 id="site-title">KL Recs</h1>
+        <button id="theme-toggle" class="theme-toggle" type="button"
+                aria-label="Switch between light and dark mode">🌙</button>
+      </div>
       <p class="subtitle" id="site-subtitle"></p>
       <ul class="tips" id="tips"></ul>
     </div>
