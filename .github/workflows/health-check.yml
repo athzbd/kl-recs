@@ -1,8 +1,11 @@
-name: Weekly place check
+name: Monthly place check
 
+# Monthly rather than weekly: ~117 Place Details calls a month sits well inside
+# Google's free allowance, and restaurants do not close often enough to justify
+# four times the API usage.
 on:
   schedule:
-    - cron: '0 22 * * 0'   # Sundays 22:00 UTC = Monday 06:00 in KL
+    - cron: '0 22 1 * *'   # 1st of the month, 22:00 UTC
   workflow_dispatch:
 
 permissions:
