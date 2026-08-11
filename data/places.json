@@ -218,17 +218,17 @@
         "sights",
         "bars"
       ],
-      "area": null,
+      "area": "Bukit Bintang",
       "notes": "Main strip of bars",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": null,
-        "lat": null,
-        "lng": null,
+        "placeId": "ChIJHVYVIyo2zDERy-y3nB6vHys",
+        "lat": 3.1472424,
+        "lng": 101.7084882,
         "businessStatus": null,
-        "address": null,
+        "address": "Changkat Bukit Bintang, Bukit Bintang, Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
       },
       "searchQuery": "Jalan Changkat Bukit Bintang Kuala Lumpur"
@@ -1335,17 +1335,17 @@
       "categories": [
         "japanese"
       ],
-      "area": null,
+      "area": "Sri Hartamas",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": null,
-        "lat": null,
-        "lng": null,
-        "businessStatus": null,
-        "address": null,
+        "placeId": "ChIJzdPFIfBIzDERElev947Ma7o",
+        "lat": 3.1632255,
+        "lng": 101.6501911,
+        "businessStatus": "OPERATIONAL",
+        "address": "54, Jalan 27/70a, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
       },
       "searchQuery": "Makoto Ramen Kuala Lumpur"
@@ -1443,17 +1443,17 @@
       "categories": [
         "thai"
       ],
-      "area": null,
+      "area": "Petaling Jaya",
       "notes": "",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": null,
-        "lat": null,
-        "lng": null,
-        "businessStatus": null,
-        "address": null,
+        "placeId": "ChIJeTJXfkxLzDERL_m0H3Axb5k",
+        "lat": 3.1073977,
+        "lng": 101.6239678,
+        "businessStatus": "OPERATIONAL",
+        "address": "21, Jln 20/16, Paramount Garden, 46300 Petaling Jaya, Selangor",
         "lastChecked": "2026-08-11"
       },
       "searchQuery": "Food Lala Thai restaurant Kuala Lumpur"
@@ -1612,7 +1612,7 @@
       "categories": [
         "bars"
       ],
-      "area": null,
+      "area": "Chinatown",
       "notes": "Chinatown bar hopping",
       "tags": [
         "chinatown-bar-hop"
@@ -1620,11 +1620,11 @@
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": null,
-        "lat": null,
-        "lng": null,
-        "businessStatus": null,
-        "address": null,
+        "placeId": "ChIJw6ZuJ-1JzDER06vzgrSwsog",
+        "lat": 3.1416329,
+        "lng": 101.69790169999999,
+        "businessStatus": "CLOSED_PERMANENTLY",
+        "address": "141, Jalan Petaling, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
       },
       "searchQuery": "Small Shifting Space bar Jalan Sultan Chinatown Kuala Lumpur"
@@ -1957,17 +1957,17 @@
       "categories": [
         "bars"
       ],
-      "area": null,
+      "area": "Damansara Heights",
       "notes": "YKO and Izakaya bars",
       "tags": [],
       "added": "2026-08-04",
       "updated": "2026-08-04",
       "google": {
-        "placeId": null,
-        "lat": null,
-        "lng": null,
-        "businessStatus": null,
-        "address": null,
+        "placeId": "ChIJczaN2KtJzDERJbTpW0HRWmg",
+        "lat": 3.1517958999999998,
+        "lng": 101.6653942,
+        "businessStatus": "OPERATIONAL",
+        "address": "Jalan Dungun, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
         "lastChecked": "2026-08-11"
       },
       "searchQuery": "The Five KPD Kompleks Pejabat Damansara Bukit Damansara"
