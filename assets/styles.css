@@ -103,6 +103,22 @@ body {
   font-weight: 700;
 }
 
+/* The title is a real button so it is keyboard reachable, but it should look
+   exactly like the heading it replaced. */
+.home-btn {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.home-btn:active { opacity: .6; }
+
 .subtitle {
   margin: 3px 0 0;
   color: var(--muted);

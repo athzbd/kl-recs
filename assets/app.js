@@ -341,7 +341,7 @@ function wireEvents() {
     render();
   });
 
-  $('clear-filters').addEventListener('click', () => {
+  const resetFilters = () => {
     Object.assign(state, { area: '', search: '', mustEat: false, nearMe: false });
     state.categories.clear();
     $('search').value = '';
@@ -349,7 +349,9 @@ function wireEvents() {
     document.querySelectorAll('[aria-pressed="true"]')
       .forEach((b) => b.setAttribute('aria-pressed', 'false'));
     render();
-  });
+  };
+
+  $('clear-filters').addEventListener('click', resetFilters);
 
   const setView = (view) => {
     state.view = view;
@@ -363,6 +365,26 @@ function wireEvents() {
   };
   $('tab-list').addEventListener('click', () => setView('list'));
   $('tab-map').addEventListener('click', () => setView('map'));
+
+  /* Smooth scrolling is a no-op in some browsers and whenever the reader has
+     reduce-motion on, which would leave the button looking broken. Ask for
+     smooth, then make sure we actually landed. */
+  const scrollToTop = () => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => { if (window.scrollY > 0) window.scrollTo(0, 0); }, 600);
+  };
+
+  // The title doubles as a home button: clear everything, back to the list,
+  // back to the top.
+  $('site-title').addEventListener('click', () => {
+    resetFilters();
+    setView('list');
+    scrollToTop();
+  });
 }
 
 function renderArchive() {
