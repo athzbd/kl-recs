@@ -133,8 +133,10 @@ function cardHtml(place, { archived = false } = {}) {
       ${dishTags.length
         ? `<p class="tags">${dishTags.map((t) => `#${escapeHtml(t)}`).join(' ')}</p>` : ''}
       <div class="card-actions">
-        <a href="${mapsUrl(place)}" target="_blank" rel="noopener">View on Maps</a>
-        <a href="${mapsUrl(place, 'directions')}" target="_blank" rel="noopener">Directions</a>
+        <a class="map-link" href="${mapsUrl(place)}" target="_blank" rel="noopener">
+          ${outlets > 1 ? 'Find nearest' : 'Open in Maps'}
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </li>`;
 }

@@ -31,27 +31,42 @@
 
   <div class="controls">
     <div class="wrap">
-      <div class="row row-search">
-        <input type="search" id="search" placeholder="Search places, dishes, notes…" autocomplete="off"
-               aria-label="Search places">
+      <div class="search-row">
+        <div class="search-field">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input type="search" id="search" placeholder="Search places, dishes…" autocomplete="off"
+                 aria-label="Search places">
+        </div>
         <div class="view-toggle" role="tablist" aria-label="View">
           <button role="tab" id="tab-list" class="active" aria-selected="true">List</button>
           <button role="tab" id="tab-map" aria-selected="false">Map</button>
         </div>
       </div>
 
-      <div class="chips" id="category-chips" role="group" aria-label="Filter by category"></div>
-
-      <div class="row row-secondary">
-        <select id="area-filter" aria-label="Filter by area">
-          <option value="">All areas</option>
-        </select>
-        <button id="near-me" class="toggle" aria-pressed="false">📍 Near me</button>
-        <button id="must-eat" class="toggle" aria-pressed="false">⭐ Must eat</button>
-        <button id="clear-filters" class="link-btn" hidden>Clear</button>
+      <div class="chip-scroller">
+        <div class="chips" id="category-chips" role="group" aria-label="Filter by category"></div>
       </div>
 
-      <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+      <div class="chip-scroller">
+        <div class="filter-row">
+          <div class="select-wrap">
+            <select id="area-filter" aria-label="Filter by area">
+              <option value="">All areas</option>
+            </select>
+          </div>
+          <button id="near-me" class="toggle" aria-pressed="false">
+            <span aria-hidden="true">📍</span> Near me
+          </button>
+          <button id="must-eat" class="toggle" aria-pressed="false">
+            <span aria-hidden="true">⭐</span> Must eat
+          </button>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+        <button id="clear-filters" class="link-btn" hidden>Clear all</button>
+      </div>
     </div>
   </div>
 
