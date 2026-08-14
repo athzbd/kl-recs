@@ -81,31 +81,20 @@
     "Brickfields",
     "Bukit Bintang",
     "Bukit Jalil",
-    "Cheras",
     "Chinatown",
     "Damansara",
     "Damansara Heights",
-    "Desa ParkCity",
     "KLCC",
     "Kajang",
-    "Kampung Baru",
-    "Kepong",
-    "Klang",
-    "Kota Damansara",
     "Lake Gardens",
     "Mid Valley",
     "Mont Kiara",
     "Petaling Jaya",
     "Publika",
-    "Puchong",
     "Pudu",
     "Rawang",
     "Sentul",
-    "Setapak",
-    "Shah Alam",
     "Sri Hartamas",
-    "Subang",
-    "Sunway",
     "TTDI",
     "Taman Desa"
   ],
@@ -3118,12 +3107,12 @@
       "added": "2026-08-14",
       "updated": "2026-08-14",
       "google": {
-        "placeId": null,
-        "lat": null,
-        "lng": null,
-        "businessStatus": null,
-        "address": null,
-        "lastChecked": null
+        "placeId": "ChIJqSc-d_JJzDERbOlsCf-UmNs",
+        "lat": 3.1219525000000004,
+        "lng": 101.6876678,
+        "businessStatus": "OPERATIONAL",
+        "address": "65, Persiaran Endah, Taman Persiaran Desa, 50460 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+        "lastChecked": "2026-08-14"
       }
     },
     {
@@ -3132,7 +3121,7 @@
       "categories": [
         "sights"
       ],
-      "area": null,
+      "area": "Lake Gardens",
       "notes": "",
       "tags": [],
       "searchQuery": "Kuala Lumpur Bird Park Lake Gardens",
@@ -3140,12 +3129,12 @@
       "added": "2026-08-14",
       "updated": "2026-08-14",
       "google": {
-        "placeId": null,
-        "lat": null,
-        "lng": null,
-        "businessStatus": null,
-        "address": null,
-        "lastChecked": null
+        "placeId": "ChIJu8zWwchJzDERhcsx4AhQ1oo",
+        "lat": 3.143164,
+        "lng": 101.6884845,
+        "businessStatus": "OPERATIONAL",
+        "address": "920, Jalan Cenderawasih, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+        "lastChecked": "2026-08-14"
       }
     },
     {
@@ -3154,7 +3143,7 @@
       "categories": [
         "sights"
       ],
-      "area": null,
+      "area": "Rawang",
       "notes": "",
       "tags": [],
       "searchQuery": "Kanching Rainforest Waterfall Templer Park Rawang Selangor",
@@ -3162,12 +3151,12 @@
       "added": "2026-08-14",
       "updated": "2026-08-14",
       "google": {
-        "placeId": null,
-        "lat": null,
-        "lng": null,
-        "businessStatus": null,
-        "address": null,
-        "lastChecked": null
+        "placeId": "ChIJIyDYGWNBzDERkKlxz2r6uLA",
+        "lat": 3.2987805999999997,
+        "lng": 101.6193205,
+        "businessStatus": "OPERATIONAL",
+        "address": "1, 48000 Rawang, Selangor",
+        "lastChecked": "2026-08-14"
       }
     }
   ],
