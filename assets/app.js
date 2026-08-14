@@ -70,7 +70,10 @@ function visiblePlaces() {
   const term = search.trim().toLowerCase();
 
   let out = data.places.filter((p) => {
-    if (categories.size && !p.categories.some((c) => categories.has(c))) return false;
+    /* Every selected category must match, not any. Picking Japanese and Late
+       night should mean "both", which is what narrowing implies — the `some`
+       version widened the results with each extra chip. */
+    if (categories.size && ![...categories].every((c) => p.categories.includes(c))) return false;
     // A chain matches on any area it reaches, so "coffee in Bangsar" finds
     // Kopenhagen even when Google pinned its Mont Kiara outlet.
     if (area && !areasFor(p).includes(area)) return false;
@@ -146,6 +149,16 @@ function render() {
 
   $('cards').innerHTML = places.map((p) => cardHtml(p)).join('');
   $('empty').hidden = places.length > 0;
+
+  /* Two categories that share nothing is a legitimate empty result, so say
+     which combination came up short rather than a flat "no matches". */
+  if (!places.length) {
+    const picked = [...state.categories].map((c) =>
+      state.data.categories.find((x) => x.id === c)?.label || c);
+    $('empty').textContent = picked.length > 1
+      ? `Nothing is ${picked.join(' and ')} at once.`
+      : 'Nothing matches those filters.';
+  }
 
   /* Spell out what is actually on. "12 of 116" left you guessing which of
      three rows of controls was doing the filtering. */
