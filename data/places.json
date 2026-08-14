@@ -81,20 +81,32 @@
     "Brickfields",
     "Bukit Bintang",
     "Bukit Jalil",
+    "Cheras",
     "Chinatown",
     "Damansara",
     "Damansara Heights",
+    "Desa ParkCity",
     "KLCC",
     "Kajang",
+    "Kampung Baru",
+    "Kepong",
+    "Klang",
+    "Kota Damansara",
     "Lake Gardens",
     "Mid Valley",
     "Mont Kiara",
     "Petaling Jaya",
     "Publika",
+    "Puchong",
     "Pudu",
     "Rawang",
     "Sentul",
+    "Seputeh",
+    "Setapak",
+    "Shah Alam",
     "Sri Hartamas",
+    "Subang",
+    "Sunway",
     "TTDI",
     "Taman Desa"
   ],
@@ -3100,7 +3112,7 @@
       "categories": [
         "sights"
       ],
-      "area": null,
+      "area": "Seputeh",
       "notes": "",
       "tags": [],
       "singleLocation": true,
@@ -3112,7 +3124,10 @@
         "lng": 101.6876678,
         "businessStatus": "OPERATIONAL",
         "address": "65, Persiaran Endah, Taman Persiaran Desa, 50460 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-        "lastChecked": "2026-08-14"
+        "lastChecked": "2026-08-14",
+        "outletAreas": [
+          "Seputeh"
+        ]
       }
     },
     {

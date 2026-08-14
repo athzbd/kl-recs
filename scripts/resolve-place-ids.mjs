@@ -83,7 +83,12 @@ for (const place of data.places) {
 }
 
 // Rebuild the area list from what actually resolved.
-data.areas = [...new Set(data.places.map((p) => p.area).filter(Boolean))].sort();
+/* Must include outletAreas, not just the pinned area. Rebuilding from `area`
+   alone silently dropped every area a chain reaches — Puchong, Sunway, Kajang
+   and eight others vanished from the filter after one resolver run. */
+data.areas = [...new Set(
+  data.places.flatMap((p) => [p.area, ...(p.google?.outletAreas || [])]).filter(Boolean)
+)].sort();
 
 console.log(`\nResolved ${resolved}. Areas found: ${data.areas.join(', ') || 'none'}`);
 if (unmatched.length) console.log(`Needs a manual look: ${unmatched.join(', ')}`);
