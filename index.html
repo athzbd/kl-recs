@@ -44,19 +44,22 @@
         </div>
       </div>
 
+      <p class="group-label" id="cat-label">What are you after?</p>
       <div class="chip-scroller">
-        <div class="chips" id="category-chips" role="group" aria-label="Filter by category"></div>
+        <div class="chips" id="category-chips" role="group" aria-labelledby="cat-label"></div>
       </div>
 
+      <p class="group-label" id="filter-label">Narrow it down</p>
       <div class="chip-scroller">
-        <div class="filter-row">
+        <div class="filter-row" role="group" aria-labelledby="filter-label">
           <div class="select-wrap">
+            <span class="select-icon" aria-hidden="true">📍</span>
             <select id="area-filter" aria-label="Filter by area">
               <option value="">All areas</option>
             </select>
           </div>
           <button id="near-me" class="toggle" aria-pressed="false">
-            <span aria-hidden="true">📍</span> Near me
+            <span aria-hidden="true">🧭</span> Near me
           </button>
           <button id="must-eat" class="toggle" aria-pressed="false">
             <span aria-hidden="true">⭐</span> Must eat
@@ -66,7 +69,7 @@
 
       <div class="status-row">
         <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
-        <button id="clear-filters" class="link-btn" hidden>Clear all</button>
+        <button id="clear-filters" class="link-btn" hidden>✕ Clear all</button>
       </div>
     </div>
   </div>

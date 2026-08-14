@@ -247,10 +247,30 @@ a:focus-visible {
   box-shadow: 0 1px 3px rgba(99,102,241,.4);
 }
 
+/* Naming each group is what finally made these rows readable — three rows of
+   similar pills gave no clue which was a category and which was a filter. */
+.group-label {
+  margin: 11px 0 5px;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Once you start scrolling the labels have done their job, so the bar sheds
+   them. Labelled when you arrive, compact while you browse.
+   display:none rather than an animated max-height — the transition version
+   silently failed to collapse in testing, and a sticky bar that does not
+   shrink is worse than one that shrinks without a flourish. */
+.controls.compact .group-label { display: none; }
+.controls.compact .status-row { margin-top: 7px; }
+.controls.compact .chip-scroller + .chip-scroller { margin-top: 7px; }
+
 /* Chips scroll sideways; the fade tells you there is more off-screen. */
 .chip-scroller {
   position: relative;
-  margin-top: 9px;
+  margin-top: 0;
 }
 
 .chip-scroller::after {
@@ -276,20 +296,22 @@ a:focus-visible {
 
 .chips::-webkit-scrollbar { display: none; }
 
+/* Categories are solid cards with shadow — the primary thing you pick. */
 .chip {
   flex-shrink: 0;
-  height: 38px;
-  padding: 0 14px;
+  height: 40px;
+  padding: 0 15px;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--text);
   font: inherit;
   font-size: .875rem;
-  font-weight: 500;
-  border-radius: 999px;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
   white-space: nowrap;
   cursor: pointer;
 }
@@ -298,8 +320,7 @@ a:focus-visible {
   background: var(--grad);
   border-color: transparent;
   color: #fff;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(99,102,241,.32);
+  box-shadow: 0 3px 12px rgba(99,102,241,.4);
 }
 
 /* Scrolls sideways rather than wrapping. Wrapping added a whole second row
@@ -317,9 +338,19 @@ a:focus-visible {
 .filter-row::-webkit-scrollbar { display: none; }
 .filter-row > * { flex-shrink: 0; }
 
-/* Area picker is deliberately styled unlike the toggles beside it — it is a
-   list of 34 places, not an on/off switch. */
+/* The area picker is a filled field like the search box, because it is an
+   input holding 30-odd values — not an on/off switch like the toggles beside
+   it. Making them look alike was the main source of confusion. */
 .select-wrap { position: relative; }
+
+.select-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: .8125rem;
+}
 
 .select-wrap::after {
   content: '▾';
@@ -333,43 +364,46 @@ a:focus-visible {
 }
 
 select {
-  height: 38px;
-  padding: 0 30px 0 13px;
+  height: 40px;
+  padding: 0 30px 0 33px;
   font: inherit;
   font-size: .875rem;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 999px;
-  border: 1px solid var(--line-strong);
-  background: var(--surface);
+  border: 1px solid transparent;
+  background: var(--field);
   color: var(--text);
   appearance: none;
   cursor: pointer;
-  max-width: 60vw;
+  max-width: 58vw;
 }
 
+select:focus { outline: none; border-color: var(--accent); }
+
+/* Toggles stay outlined and lighter, so they read as switches. */
 .toggle {
-  height: 38px;
-  padding: 0 13px;
+  height: 40px;
+  padding: 0 14px;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--text);
+  gap: 6px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--muted);
   font: inherit;
   font-size: .875rem;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 999px;
   white-space: nowrap;
   cursor: pointer;
 }
 
+/* Switched on reads as a tinted outline, not a filled card — that keeps it
+   distinct from a selected category. */
 .toggle[aria-pressed="true"] {
-  background: var(--grad);
-  border-color: transparent;
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(99,102,241,.32);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .status-row {
@@ -388,14 +422,21 @@ select {
 }
 
 .link-btn {
-  border: 0;
-  background: none;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
   color: var(--accent);
   font: inherit;
-  font-size: .8125rem;
+  font-size: .75rem;
   font-weight: 600;
   cursor: pointer;
-  padding: 4px 0;
+  padding: 5px 11px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.result-count strong {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 /* ---------- cards ---------- */

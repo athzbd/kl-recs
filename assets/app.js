@@ -147,12 +147,23 @@ function render() {
   $('cards').innerHTML = places.map((p) => cardHtml(p)).join('');
   $('empty').hidden = places.length > 0;
 
+  /* Spell out what is actually on. "12 of 116" left you guessing which of
+     three rows of controls was doing the filtering. */
   const total = state.data.places.length;
-  $('result-count').textContent =
-    places.length === total ? `${total} places` : `${places.length} of ${total} places`;
+  const active = [
+    ...[...state.categories].map((c) =>
+      state.data.categories.find((x) => x.id === c)?.label || c),
+    state.area,
+    state.mustEat ? 'Must eat' : '',
+    state.nearMe ? 'Near me' : '',
+    state.search.trim() ? `“${state.search.trim()}”` : '',
+  ].filter(Boolean);
 
-  $('clear-filters').hidden =
-    !(state.categories.size || state.area || state.search || state.mustEat || state.nearMe);
+  $('result-count').innerHTML = active.length
+    ? `<strong>${places.length}</strong> of ${total} · ${active.map(escapeHtml).join(' · ')}`
+    : `${total} places`;
+
+  $('clear-filters').hidden = active.length === 0;
 
   if (state.view === 'map') drawMarkers(places);
 }
@@ -411,6 +422,17 @@ async function init() {
 // Wired independently of the data fetch, so the toggle still works if the
 // list fails to load.
 wireTheme();
+
+/* Shed the group labels once scrolling starts. The hysteresis stops the bar
+   flickering when a scroll position sits right on the threshold. */
+(() => {
+  const controls = document.querySelector('.controls');
+  let compact = false;
+  addEventListener('scroll', () => {
+    if (!compact && scrollY > 80) { compact = true; controls.classList.add('compact'); }
+    else if (compact && scrollY < 30) { compact = false; controls.classList.remove('compact'); }
+  }, { passive: true });
+})();
 
 init().catch((err) => {
   console.error(err);

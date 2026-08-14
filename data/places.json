@@ -3104,6 +3104,71 @@
           "Bangsar"
         ]
       }
+    },
+    {
+      "id": "thean-hou-temple",
+      "name": "Thean Hou Temple",
+      "categories": [
+        "sights"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "singleLocation": true,
+      "added": "2026-08-14",
+      "updated": "2026-08-14",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "kl-bird-park",
+      "name": "KL Bird Park",
+      "categories": [
+        "sights"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "searchQuery": "Kuala Lumpur Bird Park Lake Gardens",
+      "singleLocation": true,
+      "added": "2026-08-14",
+      "updated": "2026-08-14",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
+    },
+    {
+      "id": "kanching-waterfall",
+      "name": "Kanching Rainforest Waterfall",
+      "categories": [
+        "sights"
+      ],
+      "area": null,
+      "notes": "",
+      "tags": [],
+      "searchQuery": "Kanching Rainforest Waterfall Templer Park Rawang Selangor",
+      "singleLocation": true,
+      "added": "2026-08-14",
+      "updated": "2026-08-14",
+      "google": {
+        "placeId": null,
+        "lat": null,
+        "lng": null,
+        "businessStatus": null,
+        "address": null,
+        "lastChecked": null
+      }
     }
   ],
   "archive": [
